@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/08 16:57:04 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/09 16:08:39 by paugonca         ###   ########.fr       */
+/*   Created: 2024/01/09 12:20:48 by paugonca          #+#    #+#             */
+/*   Updated: 2024/01/09 15:15:56 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.hpp"
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 
-int	main(void)
+# include "Contact.hpp"
+
+class	PhoneBook
 {
-	Contact	contact;
-
-	contact.add_contact();
-	return (0);
+	
 }
+
+#endif
