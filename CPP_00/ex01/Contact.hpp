@@ -6,13 +6,15 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 12:22:47 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/09 16:09:38 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/01/10 15:45:25 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
+
 # include <string>
+# include <iostream>
 
 class	Contact
 {
@@ -26,7 +28,7 @@ class	Contact
 		std::string	get_nickname(void) const;
 		std::string	get_phone_number(void) const;
 		std::string	get_dark_secret(void) const;
-		void		add_contact(void);
+		void		add(void);
 
 	private:
 		std::string	_first_name;

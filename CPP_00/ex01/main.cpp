@@ -6,16 +6,22 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 16:57:04 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/09 16:08:39 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/01/10 16:58:37 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.hpp"
+#include "PhoneBook.hpp"
 
 int	main(void)
 {
-	Contact	contact;
+	PhoneBook	pb;
+	std::string	input;
 
-	contact.add_contact();
-	return (0);
+	do
+	{
+		std::cout << std::endl << "Welcome to your personal crappy awesome phonebook!" << std::endl;
+		std::cout << std::endl;
+		std::cout << "-------------------------------------------------" << std::endl;
+		std::cout << "Select a command to proceed: ";
+	}
 }

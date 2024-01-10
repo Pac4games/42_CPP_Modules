@@ -6,12 +6,11 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:17:01 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/09 16:09:18 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/01/10 15:45:26 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
-#include <iostream>
 
 Contact::Contact(void)
 {
@@ -50,7 +49,7 @@ std::string	Contact::get_dark_secret(void) const
 	return (this->_dark_secret);
 }
 
-void	Contact::add_contact(void)
+void	Contact::add(void)
 {
 	std::cout << "Insert the new contact's first name: ";
 	std::getline(std::cin >> std::ws, this->_first_name);
