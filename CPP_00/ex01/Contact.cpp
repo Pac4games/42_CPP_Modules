@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:17:01 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/10 15:45:26 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/01/11 15:01:53 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ std::string	Contact::get_dark_secret(void) const
 
 void	Contact::add(void)
 {
+	std::cout << std::endl;
 	std::cout << "Insert the new contact's first name: ";
 	std::getline(std::cin >> std::ws, this->_first_name);
 	if (std::cin.eof() == 1)

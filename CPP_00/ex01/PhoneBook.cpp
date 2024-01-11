@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 15:44:39 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/10 16:45:53 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/01/11 15:15:23 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ void	PhoneBook::search(void) const
 			id.clear();
 		}
 	else
+	{
 		for (int i = 0; i < Contact::num; i++)
 		{
 			id.push_back(i + 48);
@@ -81,26 +82,31 @@ void	PhoneBook::search(void) const
 			std::cout << "|" << std::endl;
 			id.clear();
 		}
+		std::cout << " -------------------------------------------" << std::endl;
+	}
 
 	if (!Contact::num)
 	{
-		std::cout << "No contacts found." << std::endl;
+		std::cout << std::endl << "No contacts found." << std::endl;
 		return;
 	}
 
 	int	index;
 	do
 	{
-		std::cout << "Please select a contact: ";
+		std::cout << std::endl << "Please select a contact: ";
 		std::cin >> std::ws >> id;
+		std::cout << std::endl;
 		std::istringstream(id) >> index;
 		if (isdigit(id[0]) == false || id.size() > 1 || index >= 8 || index < 0 ||index >= Contact::num)
 			std::cout << "Invalid contact, try again." << std::endl;
 	} while (isdigit(id[0]) == false || id.size() > 1 || index >= 8 || index < 0 ||index >= Contact::num);
+
 	std::cout << "First name: " << contact[index].get_first_name() << std::endl;
 	std::cout << "Last name: " << contact[index].get_last_name() << std::endl;
 	std::cout << "Nickname: " << contact[index].get_nickname() << std::endl;
 	std::cout << "Phone number: " << contact[index].get_phone_number() << std::endl;
 	std::cout << "A dark secret: " << contact[index].get_dark_secret() << std::endl;
+
 	return;
 }
