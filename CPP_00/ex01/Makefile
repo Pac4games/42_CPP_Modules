@@ -6,15 +6,13 @@
 #    By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/08 16:52:09 by paugonca          #+#    #+#              #
-#    Updated: 2024/01/11 14:51:52 by paugonca         ###   ########.fr        #
+#    Updated: 2024/01/11 15:30:08 by paugonca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# COMPILER MUST BE C++ DURING THE EVALUATION
-
 NAME 		= phonebook
 
-CXX			= g++
+CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -g -std=c++98
 
 SRC			= main.cpp		\

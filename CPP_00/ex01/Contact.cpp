@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:17:01 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/11 15:01:53 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/01/11 15:46:27 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	Contact::add(void)
 	std::getline(std::cin >> std::ws, this->_first_name);
 	if (std::cin.eof() == 1)
 		return;
-	std::cout << "Insert the new contact's last name:  ";
+	std::cout << "Insert the new contact's last name: ";
 	std::getline(std::cin >> std::ws, this->_last_name);
 	if (std::cin.eof() == 1)
 		return;

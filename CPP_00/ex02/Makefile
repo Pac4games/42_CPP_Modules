@@ -5,18 +5,19 @@
 #                                                     +:+ +:+         +:+      #
 #    By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/11/30 10:05:02 by paugonca          #+#    #+#              #
-#    Updated: 2024/01/11 15:32:11 by paugonca         ###   ########.fr        #
+#    Created: 2024/01/11 15:32:32 by paugonca          #+#    #+#              #
+#    Updated: 2024/01/11 16:01:39 by paugonca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 		= megaphone
+NAME 		= tests
 
 CXX	 		= c++
 CXXFLAGS	= -Wall -Wextra -Werror -g -std=c++98
 
-SRC 		= megaphone.cpp
-OBJ 		=  $(SRC:.cpp=.o)
+SRC 		= Account.cpp	\
+			  tests.cpp
+OBJ 		= $(SRC:.cpp=.o)
 
 all: $(NAME)
 
