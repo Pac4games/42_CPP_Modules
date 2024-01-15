@@ -6,7 +6,7 @@
 #    By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/12 15:47:53 by paugonca          #+#    #+#              #
-#    Updated: 2024/01/15 14:23:39 by paugonca         ###   ########.fr        #
+#    Updated: 2024/01/15 15:26:48 by paugonca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRC			= main.cpp			\
 			  Zombie.cpp		\
 			  newZombie.cpp		\
 			  randomChump.cpp
-OBJ =  $(SRC:.cpp=.o)
+OBJ 		= $(SRC:.cpp=.o)
 
 all: $(NAME)
 
