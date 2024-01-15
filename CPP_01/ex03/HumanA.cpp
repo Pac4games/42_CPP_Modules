@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/12 15:49:48 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/15 15:58:27 by paugonca         ###   ########.fr       */
+/*   Created: 2024/01/15 18:00:25 by paugonca          #+#    #+#             */
+/*   Updated: 2024/01/15 18:09:40 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "HumanA.hpp"
 
-# include <iostream>
-# include <cstdlib>
-
-class	Zombie
+HumanA::HumanA(std::string name, Weapon &weapon) : _weapon(weapon)
 {
-	public:
-		Zombie(void);
-		~Zombie(void);
+	std::cout << "HumanA constructor called" << std::endl;
+	this->_name = name;
+}
 
-		void		announce(void);
-		void		setName(std::string name);
+HumanA::~HumanA(void)
+{
+	std::cout << "HumanA destructor called" << std::endl;
+}
 
-	private:
-		std::string	_name;
-};
-
-Zombie	*zombieHorde(int N, std::string name);
-
-#endif
+void	HumanA::attack(void)
+{
+	std::cout << this->_name << " attacks with their " << this->_weapon << std::endl;
+}

@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 15:49:48 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/15 15:11:54 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/01/15 15:58:33 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class	Zombie
 		~Zombie(void);
 
 		void		announce(void);
+
 	private:
 		std::string	_name;
 };
