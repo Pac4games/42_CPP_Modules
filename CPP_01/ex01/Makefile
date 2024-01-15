@@ -6,7 +6,7 @@
 #    By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/12 15:47:53 by paugonca          #+#    #+#              #
-#    Updated: 2024/01/15 14:23:39 by paugonca         ###   ########.fr        #
+#    Updated: 2024/01/15 14:56:37 by paugonca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,12 +14,11 @@ NAME 		= zombie
 
 # COMPILER MUST BE CHANGED TO c++ BEFORE SUBMISSION
 CXX			= g++
-CXXFLAGS	= -Wall -Wextra -Werror -std=c++98#-g
+CXXFLAGS	= -Wall -Wextra -Werror -g -std=c++98
 
 SRC			= main.cpp			\
 			  Zombie.cpp		\
-			  newZombie.cpp		\
-			  randomChump.cpp
+			  zombieHorde.cpp
 OBJ =  $(SRC:.cpp=.o)
 
 all: $(NAME)
