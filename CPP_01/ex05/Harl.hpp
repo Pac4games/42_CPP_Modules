@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/15 18:00:25 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/16 10:56:19 by paugonca         ###   ########.fr       */
+/*   Created: 2024/01/16 10:54:20 by paugonca          #+#    #+#             */
+/*   Updated: 2024/01/16 11:14:05 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
+#ifndef HARL_HPP
+# define HARL_HPP
 
-HumanA::HumanA(std::string name, Weapon &weapon) : _weapon(weapon)
-{
-//	std::cout << "HumanA constructor called" << std::endl;
-	this->_name = name;
-}
+# include <iostream>
 
-HumanA::~HumanA(void)
+class	Harl
 {
-//	std::cout << "HumanA destructor called" << std::endl;
-}
+	public:
+		Harl(void);
+		~Harl(void);
+		
+		void	complain(void);
 
-void	HumanA::attack(void)
-{
-	std::cout << this->_name << " attacks with their " << this->_weapon.getType() << std::endl;
-}
+	private:
+		void		debug(void);
+		void		info(void);
+		void		warning(void);
+		void		error(void);
+		std::string	actionLevel[4];
+};
+
+#endif

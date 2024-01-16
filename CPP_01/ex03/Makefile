@@ -6,7 +6,7 @@
 #    By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/15 15:39:58 by paugonca          #+#    #+#              #
-#    Updated: 2024/01/16 10:17:13 by paugonca         ###   ########.fr        #
+#    Updated: 2024/01/16 10:51:33 by paugonca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME 		= conflict
 
 # COMPILER MUST BE CHANGED TO c++ BEFORE SUBMISSION
 CXX			= c++
-CXXFLAGS	= -Wall -Wextra -Werror -g -std=c++98
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98#-g
 
 SRC			= main.cpp		\
 			  Weapon.cpp	\

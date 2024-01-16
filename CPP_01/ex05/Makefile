@@ -5,20 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/12 15:47:53 by paugonca          #+#    #+#              #
-#    Updated: 2024/01/16 10:51:54 by paugonca         ###   ########.fr        #
+#    Created: 2024/01/16 10:50:32 by paugonca          #+#    #+#              #
+#    Updated: 2024/01/16 10:51:08 by paugonca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 		= zombie
+NAME 		= harl
 
 # COMPILER MUST BE CHANGED TO c++ BEFORE SUBMISSION
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98#-g
 
-SRC			= main.cpp			\
-			  Zombie.cpp		\
-			  zombieHorde.cpp
+SRC			= main.cpp
 OBJ 		= $(SRC:.cpp=.o)
 
 all: $(NAME)

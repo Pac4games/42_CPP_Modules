@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 10:04:35 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/16 10:11:47 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/01/16 10:56:06 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 HumanB::HumanB(std::string name) : _name(name)
 {
-	std::cout << "HumanB constructor called" << std::endl;
+//	std::cout << "HumanB constructor called" << std::endl;
 	this->_weapon = NULL;
 }
 
 HumanB::~HumanB(void)
 {
-	std::cout << "HumanB destructor called" << std::endl;
+//	std::cout << "HumanB destructor called" << std::endl;
 }
 
 void	HumanB::setWeapon(Weapon &weapon)
