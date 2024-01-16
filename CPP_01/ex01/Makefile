@@ -6,14 +6,14 @@
 #    By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/12 15:47:53 by paugonca          #+#    #+#              #
-#    Updated: 2024/01/15 15:26:36 by paugonca         ###   ########.fr        #
+#    Updated: 2024/01/16 09:49:53 by paugonca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 		= zombie
 
 # COMPILER MUST BE CHANGED TO c++ BEFORE SUBMISSION
-CXX			= g++
+CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -g -std=c++98
 
 SRC			= main.cpp			\

@@ -6,17 +6,20 @@
 #    By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/15 15:39:58 by paugonca          #+#    #+#              #
-#    Updated: 2024/01/15 15:40:26 by paugonca         ###   ########.fr        #
+#    Updated: 2024/01/16 10:17:13 by paugonca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 		= brain
+NAME 		= conflict
 
 # COMPILER MUST BE CHANGED TO c++ BEFORE SUBMISSION
-CXX			= g++
+CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -g -std=c++98
 
-SRC			= main.cpp
+SRC			= main.cpp		\
+			  Weapon.cpp	\
+			  HumanA.cpp	\
+			  HumanB.cpp
 OBJ 		= $(SRC:.cpp=.o)
 
 all: $(NAME)
