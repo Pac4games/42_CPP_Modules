@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 10:57:43 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/16 11:14:33 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/01/17 11:25:09 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Harl::Harl(void)
 {
-	std::cout << "Harl constructor called" << std::endl;
+//	std::cout << "Harl constructor called" << std::endl;
 	actionLevel[0] = "DEBUG";
 	actionLevel[1] = "INFO";
 	actionLevel[2] = "WARNING";
@@ -23,7 +23,7 @@ Harl::Harl(void)
 
 Harl::~Harl(void)
 {
-	std::cout << "Harl destructor called" << std::endl;
+//	std::cout << "Harl destructor called" << std::endl;
 }
 
 void	Harl::debug(void)
@@ -46,17 +46,21 @@ void	Harl::warning(void)
 
 void	Harl::error(void)
 {
-	std::cout << "ERROR: This is unacceptable! I want to speak to the manager now.";
+	std::cout << "ERROR: This is unacceptable! I want to speak to the manager now." << std::endl;
 }
 
-void	complain(std::string level)
+void	Harl::complain(std::string level)
 {
-	void		(Harl::*actions[4]) (void);
-	actions[0] = &Harl::debug;
-	actions[1] = &Harl::info;
-	actions[2] = &Harl::warning;
-	actions[3] = &Harl::error;
+	void	(Harl::*functions[4]) (void);
+	functions[0] = &Harl::debug;
+	functions[1] = &Harl::info;
+	functions[2] = &Harl::warning;
+	functions[3] = &Harl::error;
 
 	for (int i = 0; i < 4; i++)
-		if
+		if (this->actionLevel[i] == level)
+		{
+			(this->*functions[i])();
+			return;
+		}
 }

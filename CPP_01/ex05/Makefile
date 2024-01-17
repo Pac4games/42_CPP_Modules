@@ -6,7 +6,7 @@
 #    By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/16 10:50:32 by paugonca          #+#    #+#              #
-#    Updated: 2024/01/16 10:51:08 by paugonca         ###   ########.fr        #
+#    Updated: 2024/01/17 11:23:50 by paugonca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ NAME 		= harl
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98#-g
 
-SRC			= main.cpp
+SRC			= main.cpp	\
+			  Harl.cpp
 OBJ 		= $(SRC:.cpp=.o)
 
 all: $(NAME)

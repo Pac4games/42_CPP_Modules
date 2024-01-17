@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 10:54:20 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/17 11:18:42 by paugonca         ###   ########.fr       */
+/*   Created: 2024/01/17 11:21:46 by paugonca          #+#    #+#             */
+/*   Updated: 2024/01/17 11:22:49 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-# define HARL_HPP
+#include "Harl.hpp"
+#include <cstdlib>
 
-# include <iostream>
-
-class	Harl
+int	main(void)
 {
-	public:
-		Harl(void);
-		~Harl(void);
-		
-		void	complain(std::string level);
+	Harl	client;
 
-	private:
-		void		debug(void);
-		void		info(void);
-		void		warning(void);
-		void		error(void);
-		std::string	actionLevel[4];
-};
+	client.complain("DEBUG");
+	client.complain("INFO");
+	client.complain("WARNING");
+	client.complain("ERROR");
 
-#endif
+	return (EXIT_SUCCESS);
+}
