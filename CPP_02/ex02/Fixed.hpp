@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 14:04:02 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/18 17:00:43 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/01/18 17:17:36 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,28 +30,30 @@ class	Fixed
 		float				toFloat(void) const;
 		int					toInt(void) const;
 
-		// Comparison operators overload
+		// Assignment operator overload
 		Fixed				&operator=(Fixed const &rhs);
-		Fixed				&operator>(Fixed const &rhs);
-		Fixed				&operator<(Fixed const &rhs);
-		Fixed				&operator>=(Fixed const &rhs);
-		Fixed				&operator<=(Fixed const &rhs);
-		Fixed				&operator==(Fixed const &rhs);
-		Fixed				&operator!=(Fixed const &rhs);
 
 		// Arithmetic operators overload
-		Fixed				&operator+(Fixed const &rhs);
-		Fixed				&operator-(Fixed const &rhs);
-		Fixed				&operator*(Fixed const &rhs);
-		Fixed				&operator/(Fixed const &rhs);
+		Fixed				operator+(Fixed const &rhs);
+		Fixed				operator-(Fixed const &rhs);
+		Fixed				operator*(Fixed const &rhs);
+		Fixed				operator/(Fixed const &rhs);
 
 		// Increment/decrement operators overload
-		Fixed				&operator++(void);
-		Fixed				&operator++(int);
-		Fixed				&operator--(void);
-		Fixed				&operator--(int);
+		Fixed				operator++(void);
+		Fixed				operator++(int);
+		Fixed				operator--(void);
+		Fixed				operator--(int);
 
-		//Overloaded member functions
+		// Comparison operators overload
+		bool				operator>(Fixed const &rhs) const;
+		bool				operator<(Fixed const &rhs) const;
+		bool				operator>=(Fixed const &rhs) const;
+		bool				operator<=(Fixed const &rhs) const;
+		bool				operator==(Fixed const &rhs) const;
+		bool				operator!=(Fixed const &rhs) const;
+
+		// Overloaded member functions
 		static Fixed		&min(Fixed &num1, Fixed &num2);
 		static Fixed		&min(Fixed const &num1, Fixed const &num2);
 		static Fixed		&max(Fixed &num1, Fixed &num2);

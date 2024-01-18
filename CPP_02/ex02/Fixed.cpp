@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 14:04:43 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/18 17:02:29 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/01/18 17:35:55 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,4 +76,124 @@ Fixed	&Fixed::operator=(Fixed const &rhs)
 		this->_num = rhs.getRawBits();
 
 	return (*this);
+}
+
+Fixed	Fixed::operator+(Fixed const &rhs)
+{
+	return (Fixed (this->toFloat() + rhs.toFloat()));
+}
+
+Fixed	Fixed::operator-(Fixed const &rhs)
+{
+	return (Fixed (this->toFloat() - rhs.toFloat()));
+}
+
+Fixed	Fixed::operator*(Fixed const &rhs)
+{
+	return (Fixed (this->toFloat() * rhs.toFloat()));
+}
+
+Fixed	Fixed::operator/(Fixed const &rhs)
+{
+	return (Fixed (this->toFloat() / rhs.toFloat()));
+}
+
+Fixed	Fixed::operator++(void)
+{
+	this->_num++;
+	
+	return (*this);
+}
+
+Fixed	Fixed::operator++(int)
+{
+	Fixed	tmp(*this);
+	this->_num++;
+	
+	return (tmp);
+}
+
+Fixed	Fixed::operator--(void)
+{
+	this->_num--;
+	
+	return (*this);
+}
+
+Fixed	Fixed::operator--(int)
+{
+	Fixed	tmp(*this);
+	this->_num--;
+	
+	return (tmp);
+}
+
+bool	Fixed::operator>(Fixed const &rhs) const
+{
+	if (this->toFloat() > rhs.toFloat())
+		return (true);
+	return (false);
+}
+
+bool	Fixed::operator<(Fixed const &rhs) const
+{
+	if (this->toFloat() < rhs.toFloat())
+		return (true);
+	return (false);
+}
+
+bool	Fixed::operator>=(Fixed const &rhs) const
+{
+	if (this->toFloat() >= rhs.toFloat())
+		return (true);
+	return (false);
+}
+
+bool	Fixed::operator<=(Fixed const &rhs) const
+{
+	if (this->toFloat() <= rhs.toFloat())
+		return (true);
+	return (false);
+}
+
+bool	Fixed::operator==(Fixed const &rhs) const
+{
+	if (this->toFloat() == rhs.toFloat())
+		return (true);
+	return (false);
+}
+
+bool	Fixed::operator!=(Fixed const &rhs) const
+{
+	if (this->toFloat() != rhs.toFloat())
+		return (true);
+	return (false);
+}
+
+Fixed	&Fixed::min(Fixed &num1, Fixed &num2)
+{
+	if (num1 < num2)
+		return (num1);
+	return (num2);
+}
+
+Fixed	&Fixed::min(Fixed const &num1, Fixed const &num2)
+{
+	if (num1 < num2)
+		return ((Fixed &)num1);
+	return ((Fixed &)num2);
+}
+
+Fixed	&Fixed::max(Fixed &num1, Fixed &num2)
+{
+	if (num1 > num2)
+		return (num1);
+	return (num2);
+}
+
+Fixed	&Fixed::max(Fixed const &num1, Fixed const &num2)
+{
+	if (num1 > num2)
+		return ((Fixed &)num1);
+	return ((Fixed &)num2);
 }
