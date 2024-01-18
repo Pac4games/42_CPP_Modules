@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/17 15:23:39 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/18 12:39:20 by paugonca         ###   ########.fr       */
+/*   Created: 2024/01/18 12:32:06 by paugonca          #+#    #+#             */
+/*   Updated: 2024/01/18 13:25:18 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,28 @@
 # define FIXED_HPP
 
 # include <iostream>
+# include <cmath>
 
-/* The Orthodox Canonical Form consists of:
- * - a default constructor;
- * - a copy constructor;
- * - a copy assignment operator overload;
- * - a destructor;
- */ 
 class	Fixed
 {
 	public:
 		Fixed(void);
-		Fixed(Fixed const &src); // Copy constructor
+		Fixed(Fixed const &src);
+		Fixed(int const &src);
+		Fixed(float const &src);
 		~Fixed(void);
 
-		Fixed				&operator=(Fixed const& rhs); // Copy assignment operator overload
-		int const			&getRawBits(void) const;
-		void				setRawBits(int const raw);
+		Fixed				&operator=(Fixed const &rhs);
+		int					getRawBits(void) const;
+		void				setRawBits(int const &raw);
+		float				toFloat(void) const;
+		int					toInt(void) const;
 
 	private:
-		int					_num;
+		int	_num;
 		static int const	_frac_bits = 8;
 };
+
+std::ostream	&operator<<(std::ostream &o, Fixed const &i);
 
 #endif
