@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 15:23:39 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/18 12:39:20 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/01/25 14:59:48 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@
  * - a copy assignment operator overload;
  * - a destructor;
  */ 
+
+// "rhs" stands for "Right-hand side"
+
 class	Fixed
 {
 	public:
