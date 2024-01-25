@@ -6,13 +6,12 @@
 #    By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/16 10:20:06 by paugonca          #+#    #+#              #
-#    Updated: 2024/01/16 10:51:23 by paugonca         ###   ########.fr        #
+#    Updated: 2024/01/25 11:44:33 by paugonca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 		= replace
 
-# COMPILER MUST BE CHANGED TO c++ BEFORE SUBMISSION
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98#-g
 

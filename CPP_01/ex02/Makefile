@@ -6,13 +6,12 @@
 #    By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/15 15:26:02 by paugonca          #+#    #+#              #
-#    Updated: 2024/01/16 10:51:44 by paugonca         ###   ########.fr        #
+#    Updated: 2024/01/25 11:44:21 by paugonca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 		= brain
 
-# COMPILER MUST BE CHANGED TO c++ BEFORE SUBMISSION
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98#-g
 
