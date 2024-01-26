@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:05:04 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/25 17:19:21 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/01/26 13:01:16 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,12 @@ void	ClapTrap::attack(const std::string &target)
 	if (this->_ep > 0)
 	{
 		this->_ep--;
+		std::cout << this->_name << " attacks " << target << ", dealing " \
+		<< this->_atk << " points of damage!" << std::endl;
 	}
+	else
+		std::cout << this->_name << " tried to attack " << target \
+		<< " but it's out of energy" << std::endl;
 }
 
 void	ClapTrap::takeDamage(unsigned int amount)
@@ -60,8 +65,34 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	{
 		this->_hp -= amount;
 		std::cout << this->_name << " was hit and lost " << amount \
-		<< "health points!" << std::endl;
+		<< " health points!" << std::endl;
 		if (this->_hp == 0)
 			std::cout << this->_name << " died!" << std::endl;
 	}
+}
+
+void	ClapTrap::beRepaired(unsigned int amount)
+{
+	if (this->_ep > 0 && this->_hp > 0)
+	{
+		this->_ep--;
+		this->_hp += amount;
+		std::cout << this->_name << " repairs itself, restoring " \
+		<< amount << " hit points" << std::endl;
+	}
+	else if (this->_hp == 0)
+	{
+		std::cout << this->_name << " tried to repair itself but is already dead..." \
+		<< std::endl;
+	}
+	else
+		std::cout << this->_name << " tried to repair itself but it's out of energy" \
+		<< std::endl;
+}
+
+void	ClapTrap::check(void)
+{
+	std::cout << std::endl << "* " << this->_name << ":" << std::endl;
+	std::cout << "Health: " << this->_hp << std::endl;
+	std::cout << "Energy: " << this->_ep << std::endl << std::endl;
 }

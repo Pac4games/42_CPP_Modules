@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 12:01:54 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/25 17:15:50 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/01/26 12:25:28 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ class	ClapTrap
 		void			attack(const std::string &target);
 		void			takeDamage(unsigned int amount);
 		void			beRepaired(unsigned int amount);
+
+		void			check(void);
 
 	private:
 		std::string		_name;
