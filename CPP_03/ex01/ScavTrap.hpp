@@ -1,0 +1,33 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/29 14:54:19 by paugonca          #+#    #+#             */
+/*   Updated: 2024/01/29 16:19:50 by paugonca         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef SCAVTRAP_H
+# define SCAVTRAP_H
+
+# include "ClapTrap.hpp"
+# include <string>
+
+class	ScavTrap : public ClapTrap
+{
+	public:
+		ScavTrap(void);
+		ScavTrap(ScavTrap const &src);
+		ScavTrap(std::string const &name);
+		~ScavTrap(void);
+
+		ScavTrap	&operator=(ScavTrap const &rhs);
+
+		void		attack(std::string const &target);
+		void		guardGate(void);
+};
+
+#endif

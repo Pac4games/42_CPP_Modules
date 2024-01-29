@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 12:33:03 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/26 12:48:20 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/01/29 14:46:26 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ int	main(void)
 		trappity.attack("Clappity");
 		trappity.check();
 	}
-	clappity.takeDamage(20);
+	clappity.takeDamage(6);
 	clappity.check();
 	clappity.takeDamage(15);
 	clappity.check();
-	clappity.takeDamage(10);
+	clappity.takeDamage(20);
 	clappity.check();
 
 	return (EXIT_SUCCESS);
