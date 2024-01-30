@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/29 14:54:19 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/30 15:44:59 by paugonca         ###   ########.fr       */
+/*   Created: 2024/01/30 15:39:10 by paugonca          #+#    #+#             */
+/*   Updated: 2024/01/30 15:55:09 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
 # include "ClapTrap.hpp"
 
-class	ScavTrap : public ClapTrap
+class	FragTrap : public ClapTrap
 {
 	public:
-		ScavTrap(void);
-		ScavTrap(ScavTrap const &src);
-		ScavTrap(std::string const &name);
-		~ScavTrap(void);
+		FragTrap(void);
+		FragTrap(FragTrap const &src);
+		FragTrap(std::string const &name);
+		~FragTrap(void);
 
-		ScavTrap	&operator=(ScavTrap const &rhs);
+		FragTrap	&operator=(FragTrap const &rhs);
 
 		void		attack(std::string const &target);
-		void		guardGate(void);
+		void		highFivesGuys(void);
 };
 
 #endif

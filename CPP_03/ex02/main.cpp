@@ -5,34 +5,36 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/30 15:07:20 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/30 16:48:06 by paugonca         ###   ########.fr       */
+/*   Created: 2024/01/30 16:34:37 by paugonca          #+#    #+#             */
+/*   Updated: 2024/01/30 16:49:23 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int	main(void)
 {
-	ClapTrap	clappity("Clappity");
-	ScavTrap	scavy("Scavy");
+	FragTrap	freddy("Frederickson");
+	FragTrap	fazbear("Fazbear");
 
-	scavy.takeDamage(3);
-	scavy.check();
-	scavy.takeDamage(50);
-	scavy.check();
-	scavy.beRepaired(42);
-	scavy.check();
-	scavy.takeDamage(14);
-	scavy.check();
-	scavy.attack("Clappity");
-	scavy.check();
-	for (int i = 0; i < 10; i++)
+	freddy.takeDamage(4);
+	freddy.check();
+	fazbear = freddy;
+	fazbear.check();
+	freddy.takeDamage(20);
+	freddy.check();
+	freddy.beRepaired(35);
+	freddy.check();
+	freddy.takeDamage(42);
+	freddy.check();
+	freddy.attack("Fazbear");
+	freddy.check();
+	for(size_t i = 0; i < 10; i++)
 	{
-		scavy.attack("Clappity");
-		scavy.check();
+		freddy.attack("Fazbear");
+		freddy.check();
 	}
-	scavy.guardGate();
-
-	return (EXIT_SUCCESS);
+	freddy.highFivesGuys();
+	freddy.check();
+	return 0;
 }

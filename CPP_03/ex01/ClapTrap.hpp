@@ -6,14 +6,15 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 12:01:54 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/29 15:06:41 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/01/30 15:45:03 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_H
-# define CLAPTRAP_H
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
 # include <iostream>
+# include <string>
 
 class	ClapTrap
 {

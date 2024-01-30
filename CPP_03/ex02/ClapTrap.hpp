@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 12:01:54 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/30 15:45:07 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/01/30 15:44:53 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class	ClapTrap
 
 		void			check(void);
 
-	private:
+	protected:
 		std::string		_name;
 		int				_hp;
 		int				_ep;
