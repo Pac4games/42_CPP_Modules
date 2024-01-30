@@ -6,17 +6,18 @@
 #    By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/29 14:31:49 by paugonca          #+#    #+#              #
-#    Updated: 2024/01/29 14:32:02 by paugonca         ###   ########.fr        #
+#    Updated: 2024/01/30 15:33:08 by paugonca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 		= ClapTrap
+NAME 		= ScavTrap
 
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98#-g
 
 SRC			= main.cpp		\
-			  ClapTrap.cpp
+			  ClapTrap.cpp	\
+			  ScavTrap.cpp
 OBJ 		= $(SRC:.cpp=.o)
 
 all: $(NAME)
