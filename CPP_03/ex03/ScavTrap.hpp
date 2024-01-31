@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 14:54:19 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/31 10:29:04 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/01/31 11:56:31 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ class	ScavTrap : virtual public ClapTrap
 		ScavTrap(ScavTrap const &src);
 		ScavTrap(std::string const &name);
 		~ScavTrap(void);
-
 		ScavTrap	&operator=(ScavTrap const &rhs);
 
 		void		attack(std::string const &target);

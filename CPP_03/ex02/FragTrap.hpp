@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 15:39:10 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/30 15:55:09 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/01/31 11:55:55 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class	FragTrap : public ClapTrap
 		FragTrap(FragTrap const &src);
 		FragTrap(std::string const &name);
 		~FragTrap(void);
-
 		FragTrap	&operator=(FragTrap const &rhs);
 
 		void		attack(std::string const &target);

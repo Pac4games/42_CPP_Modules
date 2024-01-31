@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/29 14:54:19 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/31 11:55:41 by paugonca         ###   ########.fr       */
+/*   Created: 2024/01/31 12:22:59 by paugonca          #+#    #+#             */
+/*   Updated: 2024/01/31 12:24:41 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#include "Dog.hpp"
 
-# include "ClapTrap.hpp"
-
-class	ScavTrap : public ClapTrap
+Dog::Dog(void) : Animal()
 {
-	public:
-		ScavTrap(void);
-		ScavTrap(ScavTrap const &src);
-		ScavTrap(std::string const &name);
-		~ScavTrap(void);
-		ScavTrap	&operator=(ScavTrap const &rhs);
+	this->_type = "Dog";
+	std::cout << "Dog default constructor called" << std::endl;
+}
 
-		void		attack(std::string const &target);
-		void		guardGate(void);
-};
-
-#endif
+Dog::Dog(Dog const &src) : Animal(src)
+{
+	std::cout << "Dog copy constructor called" << std::endl;
+	*this = src;
+}
