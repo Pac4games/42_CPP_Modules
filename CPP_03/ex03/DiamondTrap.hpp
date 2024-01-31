@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 18:32:07 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/30 18:47:55 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/01/31 11:19:39 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ class	DiamondTrap : public ScavTrap, public FragTrap
 
 		void		attack(std::string const &target);
 		void		whoAmI(void);
+
+	private:
+		std::string	_name;
 };
 
 #endif

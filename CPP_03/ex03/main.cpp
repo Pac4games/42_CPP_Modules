@@ -5,38 +5,35 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/30 16:34:37 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/31 10:44:11 by paugonca         ###   ########.fr       */
+/*   Created: 2024/01/31 10:42:00 by paugonca          #+#    #+#             */
+/*   Updated: 2024/01/31 10:48:00 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 #include <cstdlib>
 
 int	main(void)
 {
-	FragTrap	freddy("Frederickson");
-	FragTrap	fazbear("Fazbear");
+	DiamondTrap	drem("Drem");
 
-	freddy.takeDamage(4);
-	freddy.check();
-	fazbear = freddy;
-	fazbear.check();
-	freddy.takeDamage(20);
-	freddy.check();
-	freddy.beRepaired(35);
-	freddy.check();
-	freddy.takeDamage(42);
-	freddy.check();
-	freddy.attack("Fazbear");
-	freddy.check();
+	drem.takeDamage(4);
+	drem.check();
+	drem.takeDamage(20);
+	drem.check();
+	drem.beRepaired(35);
+	drem.check();
+	drem.takeDamage(42);
+	drem.check();
+	drem.attack("Thomaty");
+	drem.check();
 	for(size_t i = 0; i < 10; i++)
 	{
-		freddy.attack("Fazbear");
-		freddy.check();
+		drem.attack("Thomaty");
+		drem.check();
 	}
-	freddy.highFivesGuys();
-	freddy.check();
+	drem.highFivesGuys();
+	drem.whoAmI();
 
 	return (EXIT_SUCCESS);
 }
