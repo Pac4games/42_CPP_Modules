@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/31 12:15:41 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/01 12:45:48 by paugonca         ###   ########.fr       */
+/*   Created: 2024/02/01 12:39:01 by paugonca          #+#    #+#             */
+/*   Updated: 2024/02/01 12:46:35 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
 
 # include "Animal.hpp"
 
-class	Dog : public Animal
+class	Cat : public Animal
 {
 	public:
-		Dog(void);
-		Dog(Dog const &src);
-		virtual ~Dog(void);
-		Dog					&operator=(Dog const &rhs);
+		Cat(void);
+		Cat(Cat const &src);
+		virtual ~Cat(void);
+		Cat					&operator=(Cat const &rhs);
 
 		virtual void		makeSound(void) const;
 		virtual std::string	get_type(void) const;

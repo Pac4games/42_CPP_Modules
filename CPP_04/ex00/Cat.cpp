@@ -1,47 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/31 12:22:59 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/01 12:48:33 by paugonca         ###   ########.fr       */
+/*   Created: 2024/02/01 12:46:48 by paugonca          #+#    #+#             */
+/*   Updated: 2024/02/01 12:54:47 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Cat.hpp"
 
-Dog::Dog(void) : Animal()
+Cat::Cat(void) : Animal()
 {
-	std::cout << "Dog default constructor called" << std::endl;
-	this->_type = "Dog";
+	std::cout << "Cat default constructor called" << std::endl;
+	this->_type = "Cat";
 }
 
-Dog::Dog(Dog const &src) : Animal(src)
+Cat::Cat(Cat const &src)
 {
-	std::cout << "Dog copy constructor called" << std::endl;
+	std::cout << "Cat copy constructor called" << std::endl;
 	*this = src;
 }
 
-Dog::~Dog(void)
+Cat::~Cat(void)
 {
-	std::cout << "Dog destructor called" << std::endl;
+	std::cout << "Cat destructor called" << std::endl;
 }
 
-Dog	&Dog::operator=(Dog const &rhs)
+Cat	&Cat::operator=(Cat const &rhs)
 {
 	if (this != &rhs)
 		this->_type = rhs._type;
 	return (*this);
 }
 
-void	Dog::makeSound(void) const
+void	Cat::makeSound(void) const
 {
-	std::cout << "AAAWOOOOOOOOOO" << std::endl;
+	std::cout << "MAAAAAAAAAAAAAAAAOOOOOOOOOOOOWWWWWWW" << std::endl;
 }
 
-std::string	Dog::get_type(void) const
+std::string	Cat::get_type(void) const
 {
 	return (this->_type);
 }

@@ -1,47 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/31 12:22:59 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/01 12:48:33 by paugonca         ###   ########.fr       */
+/*   Created: 2024/02/01 14:24:35 by paugonca          #+#    #+#             */
+/*   Updated: 2024/02/01 14:29:23 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "WrongCat.hpp"
 
-Dog::Dog(void) : Animal()
+WrongCat::WrongCat(void) : WrongAnimal()
 {
-	std::cout << "Dog default constructor called" << std::endl;
-	this->_type = "Dog";
+	std::cout << "WrongCat default constructor called" << std::endl;
+	this->_type = "WrongCat";
 }
 
-Dog::Dog(Dog const &src) : Animal(src)
+WrongCat::WrongCat(WrongCat const &src)
 {
-	std::cout << "Dog copy constructor called" << std::endl;
+	std::cout << "WrongCat copy constructor called" << std::endl;
 	*this = src;
 }
 
-Dog::~Dog(void)
+WrongCat::~WrongCat(void)
 {
-	std::cout << "Dog destructor called" << std::endl;
+	std::cout << "WrongCat destructor called" << std::endl;
 }
 
-Dog	&Dog::operator=(Dog const &rhs)
+WrongCat	&WrongCat::operator=(WrongCat const &rhs)
 {
 	if (this != &rhs)
 		this->_type = rhs._type;
 	return (*this);
 }
 
-void	Dog::makeSound(void) const
+void	WrongCat::makeSound(void) const
 {
-	std::cout << "AAAWOOOOOOOOOO" << std::endl;
-}
-
-std::string	Dog::get_type(void) const
-{
-	return (this->_type);
+	std::cout << "cat: makeSound: No such file or directory" << std::endl;
 }

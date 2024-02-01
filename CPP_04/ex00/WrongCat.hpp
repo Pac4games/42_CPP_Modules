@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/31 12:15:41 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/01 12:45:48 by paugonca         ###   ########.fr       */
+/*   Created: 2024/02/01 13:06:24 by paugonca          #+#    #+#             */
+/*   Updated: 2024/02/01 13:10:29 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-# include "Animal.hpp"
+# include "WrongAnimal.hpp"
 
-class	Dog : public Animal
+class	WrongCat : public WrongAnimal
 {
 	public:
-		Dog(void);
-		Dog(Dog const &src);
-		virtual ~Dog(void);
-		Dog					&operator=(Dog const &rhs);
+		WrongCat(void);
+		WrongCat(WrongCat const &src);
+		virtual ~WrongCat(void);
+		WrongCat	&operator=(WrongCat const &rhs);
 
-		virtual void		makeSound(void) const;
-		virtual std::string	get_type(void) const;
+		void		makeSound(void) const;	
 };
 
 #endif

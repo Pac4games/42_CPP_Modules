@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 12:00:03 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/31 12:15:09 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/01 16:22:45 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ Animal	&Animal::operator=(Animal const &rhs)
 
 void	Animal::makeSound(void) const
 {
-	std::cout << "* Sweet silence." << std::endl;
+	std::cout << "Baby I'm preying on you tonight!!!" << std::endl;
 }
 
 std::string	Animal::get_type(void) const
