@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 17:48:18 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/01 17:59:21 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/02 12:30:46 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <fstream>
+
 class	Brain
 {
 	public:

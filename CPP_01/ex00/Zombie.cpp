@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 15:54:40 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/15 15:45:23 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/05 11:34:08 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 Zombie::Zombie(std::string name) : _name(name)
 {
-	std::cout << "Zombie " << _name << " constructor here" << std::endl;
+	std::cout << "Zombie " << _name << " constructor called" << std::endl;
 }
 
 Zombie::~Zombie(void)
 {
-	std::cout << "Zombie " << _name << " destructor here" << std::endl;
+	std::cout << "Zombie " << _name << " destructor called" << std::endl;
 }
 
 void	Zombie::announce(void)

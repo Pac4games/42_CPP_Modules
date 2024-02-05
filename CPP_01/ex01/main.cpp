@@ -6,11 +6,12 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 16:01:58 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/15 15:28:35 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/05 12:18:34 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+#include <cstdlib>
 
 int	main(void)
 {

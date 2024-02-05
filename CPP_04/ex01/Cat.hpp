@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 12:39:01 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/01 12:46:35 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/02 13:02:20 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CAT_HPP
 
 # include "Animal.hpp"
+# include "Brain.hpp"
 
 class	Cat : public Animal
 {
@@ -25,6 +26,11 @@ class	Cat : public Animal
 
 		virtual void		makeSound(void) const;
 		virtual std::string	get_type(void) const;
+		std::string			&get_idea(int i) const;
+		void				set_idea(int i, std::string const &idea);
+
+	private:
+		Brain				*_brain;
 };
 
 #endif

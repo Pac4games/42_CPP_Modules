@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 15:49:48 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/15 15:58:27 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/05 11:42:33 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define ZOMBIE_HPP
 
 # include <iostream>
-# include <cstdlib>
 
 class	Zombie
 {

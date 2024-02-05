@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 16:40:38 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/16 10:56:31 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/05 12:29:48 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 Weapon::Weapon(std::string type)
 {
-	setType(type);
 //	std::cout << "Weapon constructor called" << std::endl;
+	setType(type);
 }
 
 Weapon::~Weapon(void)
