@@ -6,14 +6,14 @@
 #    By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/31 11:22:31 by paugonca          #+#    #+#              #
-#    Updated: 2024/02/01 16:29:18 by paugonca         ###   ########.fr        #
+#    Updated: 2024/02/08 12:19:39 by paugonca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 		= Animals
 
 CXX			= c++
-CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow#-g
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98#-g
 
 SRC			= main.cpp			\
 			  Animal.cpp		\

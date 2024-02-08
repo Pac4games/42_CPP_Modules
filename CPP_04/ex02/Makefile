@@ -6,14 +6,14 @@
 #    By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/01 17:41:33 by paugonca          #+#    #+#              #
-#    Updated: 2024/02/07 11:46:38 by paugonca         ###   ########.fr        #
+#    Updated: 2024/02/08 12:19:09 by paugonca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 		= Abstraction
 
 CXX			= c++
-CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow -g
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98#-g
 
 SRC			= main.cpp			\
 			  Animal.cpp		\
