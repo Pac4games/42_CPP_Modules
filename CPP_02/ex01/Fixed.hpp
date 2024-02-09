@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 12:32:06 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/18 13:25:18 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/09 11:15:31 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class	Fixed
 		int					toInt(void) const;
 
 	private:
-		int	_num;
+		int					_num;
 		static int const	_frac_bits = 8;
 };
 
