@@ -6,16 +6,15 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 14:34:41 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/08 11:54:22 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/12 12:22:33 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
-#include "AMateria.hpp"
 
 Character::Character(void) : ICharacter(), _name("Noelle")
 {
-	std::cout << "Character default constructor called" << std::endl;
+//	std::cout << "Character default constructor called" << std::endl;
 	for (int i = 0; i < 4; i++)
 		this->inventory[i] = NULL;
 }
@@ -28,7 +27,7 @@ Character::Character(std::string const &name) : _name(name)
 
 Character::Character(Character const &src)
 {
-	std::cout << "Character copy constructor called" << std::endl;
+//	std::cout << "Character copy constructor called" << std::endl;
 	for (int i = 0; i < 4; i++)
 		this->inventory[i] = NULL;
 	*this = src;
@@ -36,7 +35,7 @@ Character::Character(Character const &src)
 
 Character::~Character(void)
 {
-	std::cout << "Character destructor called" << std::endl;
+//	std::cout << "Character destructor called" << std::endl;
 	for (int i = 0; i < 4; i++)
 		if (this->inventory[i] != NULL)
 			delete inventory[i];

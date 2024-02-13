@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 12:51:38 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/02 16:45:42 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/12 15:16:55 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	main(void)
 		else
 			frens[i] = new Cat;
 	}
-	std::cout << "My first fren is a " << frens[0]->get_type() \
+	std::cout << std::endl << "My first fren is a " << frens[0]->get_type() \
 	<< " and the last one is a " << frens[9]->get_type() << std::endl;
 
 	//Dog tests
@@ -34,6 +34,7 @@ int	main(void)
 	Animal	*testDog = new Dog(*((Dog *)frens[0]));
 
 	((Dog *)frens[0])->set_idea(0, "food consumption time");
+	std::cout << std::endl;
 
 	std::cout << ((Dog *)frens[0])->get_idea(0) << std::endl;
 	std::cout << ((Dog *)testDog)->get_idea(0) << std::endl << std::endl;
@@ -41,14 +42,15 @@ int	main(void)
 	delete testDog;
 
 	//Cat tests
-	std::cout << ((Cat *)frens[0])->get_idea(0) << std::endl << std::endl;
+	std::cout << std::endl << ((Cat *)frens[9])->get_idea(10) << std::endl \
+	<< std::endl;
 
 	Animal	*testCat = new Cat(*((Cat *)frens[9]));
 
 	((Dog *)frens[9])->set_idea(10, "*nothing but silence*");
 
-	std::cout << ((Cat *)frens[9])->get_idea(10) << std::endl;
-	std::cout << ((Cat *)testCat)->get_idea(10) << std::endl;
+	std::cout << std::endl << ((Cat *)frens[9])->get_idea(10) << std::endl;
+	std::cout << ((Cat *)testCat)->get_idea(10) << std::endl << std::endl;
 
 	delete testCat;
 

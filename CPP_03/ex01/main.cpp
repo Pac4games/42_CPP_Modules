@@ -6,11 +6,12 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 15:07:20 by paugonca          #+#    #+#             */
-/*   Updated: 2024/01/30 16:48:06 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/09 15:27:57 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+#include <cstdlib>
 
 int	main(void)
 {

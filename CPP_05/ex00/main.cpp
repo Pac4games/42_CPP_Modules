@@ -1,33 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/08 11:47:20 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/12 12:23:01 by paugonca         ###   ########.fr       */
+/*   Created: 2024/02/13 17:09:51 by paugonca          #+#    #+#             */
+/*   Updated: 2024/02/13 17:09:57 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CURE_HPP
-# define CURE_HPP
-
-# include "AMateria.hpp"
-# include "ICharacter.hpp"
-
-class	Cure : public AMateria
-{
-	public:
-		Cure(void);
-		Cure(Cure const &src);
-		virtual ~Cure(void);
-
-		AMateria	*clone(void) const;
-		void		use(ICharacter &target);
-
-	private:
-		Cure		&operator=(Cure const &rhs);
-};
-
-#endif
+#include "Bureaucrat.hpp"

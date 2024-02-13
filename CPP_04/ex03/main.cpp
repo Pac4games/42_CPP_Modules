@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 12:19:48 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/08 12:42:31 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/12 13:11:59 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@ int	main(void)
 	AMateria		*test = NULL;
 	src1->learnMateria(test);
 	for (int i = 0; i < 5; i++)
-		src1->learnMateria(new Ice());
+		if (i % 2 == 0)
+			src1->learnMateria(new Ice());
+		else
+			src1->learnMateria(new Cure());
 
 	IMateriaSource	*src2 = new MateriaSource(*(MateriaSource *)src1);
 	ICharacter		*vessel = new Character("Noelle");

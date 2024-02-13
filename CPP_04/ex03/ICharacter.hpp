@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 14:00:07 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/07 14:35:09 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/12 12:21:03 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class	ICharacter
 {
 	public:
-		virtual ~ICharacter(void);
+		virtual ~ICharacter(void) {}
 
 		virtual const std::string	&getName() const = 0;
 		virtual void				equip(AMateria *m) = 0;
