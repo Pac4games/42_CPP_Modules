@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 16:23:30 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/13 17:09:31 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/20 11:09:57 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void	Bureaucrat::decrementGrade(void)
 
 const char	*Bureaucrat::GradeTooHighException::what() const throw()
 {
-	return ("Exception: grade too high!");
+	return ("Exception: grade too high");
 }
 
 const char	*Bureaucrat::GradeTooLowException::what() const throw()
