@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/13 17:09:51 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/20 12:45:54 by paugonca         ###   ########.fr       */
+/*   Created: 2024/02/20 12:34:39 by paugonca          #+#    #+#             */
+/*   Updated: 2024/02/20 12:46:20 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#include "Form.hpp"
 #include <cstdlib>
 
 int	main(void)
@@ -18,12 +18,19 @@ int	main(void)
 	try
 	{
 		Bureaucrat	glados("GLaDOS", 1);
-		Bureaucrat	wheatley("Wheatley", 150);
+		Bureaucrat	wheatley("Wheatley", 6);
+		Form		cake("Cake", 6, 7);
+		Form		cupcake(cake);
 
 		std::cout << glados << std::endl;
 		std::cout << wheatley << std::endl;
-		glados.incrementGrade();
-		wheatley.decrementGrade();
+		std::cout << cake << std::endl << std::endl;
+
+		cake.beSigned(glados);
+		std::cout << cake << std::endl;
+		cake.beSigned(glados);
+		std::cout << std:: endl << cupcake << std::endl;
+		cupcake.beSigned(wheatley);
 	}
 	catch (std::exception & e)
 	{

@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 14:24:34 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/20 12:41:23 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/20 11:55:19 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <iostream>
 # include <stdexcept>
+
+class	Form;
 
 class	Bureaucrat
 {
@@ -29,6 +31,7 @@ class	Bureaucrat
 
 		void				incrementGrade(void);
 		void				decrementGrade(void);
+		void				signForm(const Form &form) const;
 
 		class GradeTooHighException : public std::exception
 		{
