@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 17:09:51 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/20 12:45:54 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/21 14:30:54 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	main(void)
 		glados.incrementGrade();
 		wheatley.decrementGrade();
 	}
-	catch (std::exception & e)
+	catch (std::exception &e)
 	{
 		std::cerr << e.what() << std::endl;
 	}

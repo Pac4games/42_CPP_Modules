@@ -5,32 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/20 12:34:39 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/21 14:31:03 by paugonca         ###   ########.fr       */
+/*   Created: 2024/02/22 12:26:41 by paugonca          #+#    #+#             */
+/*   Updated: 2024/02/22 12:52:49 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
 #include <cstdlib>
 
 int	main(void)
 {
 	try
 	{
-		Bureaucrat	glados("GLaDOS", 1);
-		Bureaucrat	wheatley("Wheatley", 6);
-		Form		cake("Cake", 6, 7);
-		Form		cupcake(cake);
+		Bureaucrat				maddie("Madeline", 10);
+		ShrubberyCreationForm	berry("Berry");	
 
-		std::cout << glados << std::endl;
-		std::cout << wheatley << std::endl;
-		std::cout << cake << std::endl << std::endl;
-
-		cake.beSigned(glados);
-		std::cout << cake << std::endl;
-		cake.beSigned(glados);
-		std::cout << std:: endl << cupcake << std::endl;
-		cupcake.beSigned(wheatley);
+		std::cout << berry << std::endl << std::endl;
+		berry.beSigned(maddie);
+		berry.execute(maddie);
 	}
 	catch (std::exception &e)
 	{
