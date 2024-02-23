@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 14:24:34 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/21 16:42:34 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/23 15:07:28 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define BUREAUCRAT_HPP
 
 # include <iostream>
+# include <string>
 # include <stdexcept>
 
 class	Bureaucrat

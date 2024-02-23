@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 14:24:34 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/23 15:07:23 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/23 15:07:07 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <string>
 # include <stdexcept>
 
-class	Form;
+class	AForm;
 
 class	Bureaucrat
 {
@@ -32,15 +32,16 @@ class	Bureaucrat
 
 		void				incrementGrade(void);
 		void				decrementGrade(void);
-		void				signForm(const Form &form) const;
+		void				signForm(const AForm &form) const;
+		void				executeForm(const AForm &form) const;
 
-		class	GradeTooHighException : public std::exception
+		class GradeTooHighException : public std::exception
 		{
 			public:
 				virtual const char	*what() const throw();
 		};
 
-		class	GradeTooLowException : public std::exception
+		class GradeTooLowException : public std::exception
 		{
 			public:
 				virtual const char	*what() const throw();
