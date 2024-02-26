@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 15:09:35 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/22 12:49:26 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/26 12:31:59 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class	AForm
 	public:
 		AForm(const std::string &name, int to_sign, int to_exec);
 		AForm(const AForm &src);
-		~AForm(void);
+		virtual ~AForm(void);
 		AForm				&operator=(const AForm &rhs);
 
 		const std::string	&getName(void) const;
