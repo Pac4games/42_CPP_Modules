@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 16:42:02 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/26 16:45:50 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/27 15:45:56 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,9 @@ ScalarConverter	&ScalarConverter::operator=(const ScalarConverter &rhs)
 {
 	(void)rhs;
 	return (*this);
+}
+
+void	ScalarConverter::converter(const std::string &in)
+{
+
 }

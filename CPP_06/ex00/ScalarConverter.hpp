@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 16:33:33 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/26 16:41:34 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/27 16:38:30 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <iostream>
 # include <string>
+# include <iomanip>
+# include <climits>
 
 class	ScalarConverter
 {
@@ -28,6 +30,15 @@ class	ScalarConverter
 		ScalarConverter(const ScalarConverter &src);
 		ScalarConverter	&operator=(const ScalarConverter &rhs);
 };
+
+typedef enum	e_scalar_type
+{
+	e_invalid,
+	e_char,
+	e_int,
+	e_float,
+	e_double
+}	t_scalar_type;
 
 int		checkType(const std::string &in);
 
