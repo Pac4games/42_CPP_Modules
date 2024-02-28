@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 16:42:02 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/27 15:45:56 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/28 12:56:03 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,22 @@ ScalarConverter	&ScalarConverter::operator=(const ScalarConverter &rhs)
 
 void	ScalarConverter::converter(const std::string &in)
 {
-
+	switch (static_cast<int>(get_ScalarType(in)))
+	{
+		case e_char:
+			conv2char(in);
+			break;
+		case e_int:
+			conv2int(in);
+			break;
+		case e_float:
+			conv2float(in);
+			break;
+		case e_double:
+			conv2double(in);
+			break;
+		default:
+			std::cout << "Error: wrong syntax. " \
+			<< "Please insert a value of type char, int, flot or double" << std::endl;
+	}
 }

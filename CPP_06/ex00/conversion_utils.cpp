@@ -6,12 +6,11 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 15:46:06 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/27 16:46:08 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/28 12:56:34 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
-#include <climits>
 
 static bool	is_all_digits(const std::string &in)
 {
@@ -80,7 +79,7 @@ static bool	is_double(const std::string &in)
 	return (false);
 }
 
-t_scalar_type	getScalarType(const std::string &in)
+t_scalar_type	get_ScalarType(const std::string &in)
 {
 	if (!isdigit(in[0]) && in.length() == 1)
 		return (e_char);
@@ -108,15 +107,126 @@ void	conv2char(const std::string &in)
 
 void	conv2int(const std::string &in)
 {
-	long int	tmp1 = strtol(in.c_str(), NULL, 10);
-	if (tmp1 < INT_MIN || tmp1 > INT_MAX)
+	long int	tmp = strtol(in.c_str(), NULL, 10);
+	if (tmp < std::numeric_limits<int>::min() || \
+	tmp > std::numeric_limits<int>::max())
 	{
 		std::cout << "Error: integer overflow" << std::endl;
 		return;
 	}
 
-	int			tmp2 = atoi(in.c_str());
+	int			num = atoi(in.c_str());
 	std::cout << "char :";
-	if (tmp2 < CHAR_MIN || tmp2 > CHAR_MAX)
+	if (num < std::numeric_limits<char>::min() \
+	|| num > std::numeric_limits<char>::max())
 		std::cout << "impossible" << std::endl;
+	else if (isprint(num))
+		std::cout << "'" << static_cast<char>(num) << "'" << std::endl;
+	else
+		std::cout << "Non displayable" << std::endl;
+	std::cout << "int: " << num << std::endl;
+	std::cout << "float: " << std::fixed << std::setprecision(1) \
+	<< static_cast<float>(num) << "f" << std::endl;
+	std::cout << "double: " << std::fixed << std::setprecision(1) \
+	<< static_cast<double>(num) << std::endl;
+}
+
+void	conv2float(const std::string &in)
+{
+	if (in == "nanf" || in == "+inff" || in == "-inff")
+	{
+		std::cout << "char: impossible" << std::endl;
+		std::cout << "int: impossible" << std::endl;
+		if (in == "nanf")
+		{
+			std::cout << "float: nanf" << std::endl;
+			std::cout << "double: nan" << std::endl;
+		}
+		std::cout << "float: " << (in == "-inff" ? "-inff" : "+inff") << std::endl;
+		std::cout << "double: " << (in == "-inf" ? "-inf" : "+inf") << std::endl;
+		return;
+	}
+
+	double	tmp = strtod(in.c_str(), NULL);
+	if (tmp < std::numeric_limits<float>::min() || \
+	tmp > std::numeric_limits<float>::max())
+	{
+		std::cout << "Error: float overflow" << std::endl;
+		return;
+	}
+
+	float	num = strtof(in.c_str(), NULL);
+	std::cout << "char: ";
+	if (num < std::numeric_limits<char>::min() \
+	|| num > std::numeric_limits<char>::max())
+		std::cout << "impossible" << std::endl;
+	else if (isprint(num))
+		std::cout << "'" << static_cast<char>(num) << "'" << std::endl;
+	else
+		std::cout << "Non displayable" << std::endl;
+	std::cout << "int: ";
+	if (static_cast<int>(num) < std::numeric_limits<int>::min() || \
+	static_cast<int>(num) > std::numeric_limits<int>::max())
+		std::cout << "impossible" << std::endl;
+	else
+		std::cout << static_cast<int>(num) << std::endl;
+	if (in.find(".0f"))
+	{
+		std::cout << "float: " << std::fixed << std::setprecision(1) << num \
+		<< "f" << std::endl;
+		std::cout << "double: " << std::fixed << std::setprecision(1) << \
+		static_cast<double>(num) << std::endl;
+	}
+	else
+	{
+		std::cout << "float: " << num << "f" << std::endl;
+		std::cout << "double: " << static_cast<double>(num) << std::endl;
+	}
+}
+
+void	conv2double(const std::string &in)
+{
+	if (in == "nan" || in == "+inf" || in == "-inf")
+	{
+		std::cout << "char: impossible" << std::endl;
+		std::cout << "int: impossible" << std::endl;
+		if (in == "nan")
+		{
+			std::cout << "float: nanf" << std::endl;
+			std::cout << "double: nan" << std::endl;
+		}
+		std::cout << "float: " << (in == "-inf" ? "-inff" : "+inff") << std::endl;
+		std::cout << "double: " << (in == "-inf" ? "-inf" : "+inf") << std::endl;
+		return;
+	}
+
+	long double	tmp = strtold(in.c_str(), NULL);
+	if (tmp < std::numeric_limits<double>::min() || \
+	tmp > std::numeric_limits<double>::max())
+	{
+		std::cout << "Error: double overflow" << std::endl;
+		return;
+	}
+
+	double		num = strtod(in.c_str(), NULL);
+	std::cout << "char: ";
+	if (num < std::numeric_limits<char>::min() \
+	|| num > std::numeric_limits<char>::max())
+		std::cout << "impossible" << std::endl;
+	else if (isprint(num))
+		std::cout << "'" << static_cast<char>(num) << "'" << std::endl;
+	else
+		std::cout << "Non displayable" << std::endl;
+	if (num < std::numeric_limits<int>::min() || \
+	num > std::numeric_limits<int>::max())
+		std::cout << "impossible" << std::endl;
+	else
+		std::cout << static_cast<int>(num) << std::endl;
+	std::cout << "float: ";
+	if (num < std::numeric_limits<float>::min() || \
+	num > std::numeric_limits<float>::max())
+		std::cout << "impossible" << std::endl;
+	else
+		std::cout << static_cast<float>(num) << "f" << std::endl;
+	std::cout << "double: " << num << std::endl;
 }

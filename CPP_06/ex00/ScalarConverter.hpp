@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 16:33:33 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/27 16:38:30 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/28 13:01:03 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <iostream>
 # include <string>
 # include <iomanip>
-# include <climits>
+# include <limits>
 
 class	ScalarConverter
 {
@@ -33,18 +33,18 @@ class	ScalarConverter
 
 typedef enum	e_scalar_type
 {
-	e_invalid,
 	e_char,
 	e_int,
 	e_float,
-	e_double
+	e_double,
+	e_invalid
 }	t_scalar_type;
 
-int		checkType(const std::string &in);
-
-void	conv2int(const std::string &in);
-void	conv2char(const std::string &in);
-void	conv2float(const std::string &in);
-void	conv2double(const std::string &in);
+// conversion_utils.cpp
+t_scalar_type	get_ScalarType(const std::string &in);
+void			conv2int(const std::string &in);
+void			conv2char(const std::string &in);
+void			conv2float(const std::string &in);
+void			conv2double(const std::string &in);
 
 #endif
