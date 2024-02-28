@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 16:33:33 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/28 13:01:03 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/28 14:05:52 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <iostream>
 # include <string>
 # include <iomanip>
+# include <cstdlib>
 # include <limits>
 
 class	ScalarConverter

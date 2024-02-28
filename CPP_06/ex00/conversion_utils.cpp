@@ -6,17 +6,18 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 15:46:06 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/28 12:56:34 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/28 14:20:24 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
+#include <cstdlib>
 
 static bool	is_all_digits(const std::string &in)
 {
 	if (!in.length())
 		return (false);
-	for (int i = 0; i < in.length(); i++)
+	for (size_t i = 0; i < in.length(); i++)
 		if (!isdigit(in[i]))
 			return (false);
 	return (true);
@@ -29,7 +30,7 @@ static bool	is_float(const std::string &in)
 	int	plus = 0;
 	int	f = 0;
 
-	for (int i = 0; i < in.length(); i++)
+	for (size_t i = 0; i < in.length(); i++)
 	{
 		if (in[i] == '.')
 			dot++;
@@ -58,7 +59,7 @@ static bool	is_double(const std::string &in)
 	int	minus = 0;
 	int	plus = 0;
 
-	for (int i = 0; i < in.length(); i++)
+	for (size_t i = 0; i < in.length(); i++)
 	{
 		if (in[i] == '.')
 			dot++;
@@ -97,7 +98,7 @@ void	conv2char(const std::string &in)
 {
 	char	tmp = in[0];
 
-	std::cout << "char: '" << tmp << std::endl;
+	std::cout << "char: '" << tmp << "'" << std::endl;
 	std::cout << "int: " << static_cast<int>(tmp) << std::endl;
 	std::cout << "float: " << std::fixed << std::setprecision(1) \
 	<< static_cast<float>(tmp) << "f" << std::endl;
@@ -116,7 +117,7 @@ void	conv2int(const std::string &in)
 	}
 
 	int			num = atoi(in.c_str());
-	std::cout << "char :";
+	std::cout << "char: ";
 	if (num < std::numeric_limits<char>::min() \
 	|| num > std::numeric_limits<char>::max())
 		std::cout << "impossible" << std::endl;
@@ -141,10 +142,13 @@ void	conv2float(const std::string &in)
 		{
 			std::cout << "float: nanf" << std::endl;
 			std::cout << "double: nan" << std::endl;
+		} 
+		else
+		{
+			std::cout << "float: " << (in == "-inff" ? "-inff" : "+inff") << std::endl;
+			std::cout << "double: " << (in == "-inf" ? "-inf" : "+inf") << std::endl;
 		}
-		std::cout << "float: " << (in == "-inff" ? "-inff" : "+inff") << std::endl;
-		std::cout << "double: " << (in == "-inf" ? "-inf" : "+inf") << std::endl;
-		return;
+		 return;
 	}
 
 	double	tmp = strtod(in.c_str(), NULL);
@@ -195,8 +199,11 @@ void	conv2double(const std::string &in)
 			std::cout << "float: nanf" << std::endl;
 			std::cout << "double: nan" << std::endl;
 		}
-		std::cout << "float: " << (in == "-inf" ? "-inff" : "+inff") << std::endl;
-		std::cout << "double: " << (in == "-inf" ? "-inf" : "+inf") << std::endl;
+		else
+		{
+			std::cout << "float: " << (in == "-inf" ? "-inff" : "+inff") << std::endl;
+			std::cout << "double: " << (in == "-inf" ? "-inf" : "+inf") << std::endl;
+		}
 		return;
 	}
 
@@ -217,6 +224,7 @@ void	conv2double(const std::string &in)
 		std::cout << "'" << static_cast<char>(num) << "'" << std::endl;
 	else
 		std::cout << "Non displayable" << std::endl;
+	std::cout << "int: ";
 	if (num < std::numeric_limits<int>::min() || \
 	num > std::numeric_limits<int>::max())
 		std::cout << "impossible" << std::endl;
@@ -227,6 +235,7 @@ void	conv2double(const std::string &in)
 	num > std::numeric_limits<float>::max())
 		std::cout << "impossible" << std::endl;
 	else
-		std::cout << static_cast<float>(num) << "f" << std::endl;
-	std::cout << "double: " << num << std::endl;
+		std::cout << std::fixed << std::setprecision(1) \
+		<< static_cast<float>(num) << "f" << std::endl;
+	std::cout << "double: " << std::fixed << std::setprecision(1) << num << std::endl;
 }
