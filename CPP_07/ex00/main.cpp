@@ -6,11 +6,12 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 15:24:07 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/29 15:42:49 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/29 15:52:29 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "whatever.hpp"
+#include <cstdlib>
 
 int	main(void)
 {
@@ -41,4 +42,6 @@ int	main(void)
 	std::cout << "g = " << g << "; h = " << h << std::endl;
 	std::cout << "::min(g, h) = " << ::min(g, h) << std::endl;
 	std::cout << "::max(g, h) = " << ::max(g, h) << std::endl;
+
+	return (EXIT_SUCCESS);
 }
