@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 17:06:01 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/28 17:14:55 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/02/29 13:48:20 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,24 @@ class	Base
 		virtual ~Base(void) {};
 };
 
-class	A : public Base{};
-class	B : public Base{};
-class	C : public Base{};
+class	A : public Base
+{
+	public: A(void) { std::cout << "Class A constructor called" << std::endl; }
+};
 
+class	B : public Base
+{
+	public: B(void) { std::cout << "Class B constructor called" << std::endl; }
+};
+
+class	C : public Base
+{
+	public: C(void) { std::cout << "Class C constructor called" << std::endl; }
+};
+
+// utils.cpp 
 void	identify(Base &p);
 void	identify(Base *p);
+Base	*randomize_class(void);
 
 #endif

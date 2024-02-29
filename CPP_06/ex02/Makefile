@@ -6,18 +6,17 @@
 #    By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/28 16:46:25 by paugonca          #+#    #+#              #
-#    Updated: 2024/02/28 16:47:13 by paugonca         ###   ########.fr        #
+#    Updated: 2024/02/29 13:53:10 by paugonca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 		= Serializer
+NAME 		= Identify
 
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98#-g
 
-SRC			= main.cpp			\
-			  Data.cpp			\
-			  Serializer.cpp
+SRC			= main.cpp	\
+			  utils.cpp
 OBJ 		= $(SRC:.cpp=.o)
 
 all: $(NAME)
