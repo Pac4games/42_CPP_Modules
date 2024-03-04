@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 16:18:30 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/29 16:29:39 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/03/04 12:54:36 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 Vessel::Vessel(void)
 {
 //	std::cout << "Vessel default constructor called" << std::endl;
+}
+
+Vessel::Vessel(const std::string &name, const int hp, const int atk, const int def) : _name(name), _hp(hp), _atk(atk), _def(def)
+{
+//	std::cout << "Vessel constructor for " << name << " called" << std::endl;
 }
 
 Vessel::Vessel(const Vessel &src)
@@ -58,24 +63,4 @@ int	Vessel::getATK(void) const
 int	Vessel::getDEF(void) const
 {
 	return (this->_def);
-}
-
-void	Vessel::setName(const std::string &name)
-{
-	this->_name = name;
-}
-
-void	Vessel::setHP(const int hp)
-{
-	this->_hp = hp;
-}
-
-void	Vessel::setATK(const int atk)
-{
-	this->_atk = atk;
-}
-
-void	Vessel::setDEF(const int def)
-{
-	this->_def = def;
 }

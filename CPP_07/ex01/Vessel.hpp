@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 16:11:00 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/29 16:23:54 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/03/04 12:54:45 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class	Vessel
 {
 	public:
 		Vessel(void);
+		Vessel(const std::string &name, const int hp, const int atk, const int def);
 		Vessel(const Vessel &src);
 		~Vessel(void);
 		Vessel		&operator=(const Vessel &rhs);
@@ -28,10 +29,6 @@ class	Vessel
 		int			getHP(void) const;
 		int			getATK(void) const;
 		int			getDEF(void) const;
-		void		setName(const std::string &name);
-		void		setHP(const int hp);
-		void		setATK(const int atk);
-		void		setDEF(const int def);
 
 	private:
 		std::string	_name;
