@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 16:30:20 by paugonca          #+#    #+#             */
-/*   Updated: 2024/03/04 13:03:35 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/03/04 14:20:42 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,6 @@ static void	flip_case(const char &c)
 		std::cout << static_cast<char>(toupper(c));
 	else if (c >= 'A' && c <= 'Z')
 		std::cout << static_cast<char>(tolower(c));
-}
-
-static void	check_stats(const Vessel &vessel)
-{
-	std::cout << "* " << vessel.getName() << std::endl;
-	std::cout << "HP " << vessel.getHP() << " ATK " << vessel.getATK() << " DEF " \
-	<< vessel.getDEF() << std::endl;
 }
 
 int	main(void)
