@@ -6,15 +6,13 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 10:50:23 by paugonca          #+#    #+#             */
-/*   Updated: 2024/03/05 10:59:16 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/03/05 12:15:52 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef EASYFIND_HPP
 # define EASYFIND_HPP
 
-# include <algorithm>
-# include <exception>
 # include <stdexcept>
 
 template <typename T>
