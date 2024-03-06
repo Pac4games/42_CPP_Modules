@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 14:29:58 by paugonca          #+#    #+#             */
-/*   Updated: 2024/03/05 17:18:03 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/03/06 13:06:11 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 # define MUTANTSTACK_HPP
 
 # include <stack>
-# include <list>
+# include <deque>
 # include <iostream>
 
-template <typename T, typename Container = std::list<T>>
+template <typename T, typename Container = std::deque<T> >
 class	MutantStack : public std::stack<T, Container>
 {
 	public:
@@ -61,6 +61,30 @@ template <typename T, typename Container>
 MutantStack<T, Container>	&MutantStack<T, Container>::operator=(const MutantStack &rhs)
 {
 	*this = std::stack<T, Container>::operator=(rhs);
+}
+
+template <typename T, typename Container>
+typename MutantStack<T, Container>::iterator	MutantStack<T, Container>::begin(void)
+{
+	return (this->std::stack<T, Container>::c.begin());
+}
+
+template <typename T, typename Container>
+typename MutantStack<T, Container>::iterator	MutantStack<T, Container>::end(void)
+{
+	return (this->std::stack<T, Container>::c.end());
+}
+
+template <typename T, typename Container>
+typename MutantStack<T, Container>::reverse_iterator	MutantStack<T, Container>::rbegin(void)
+{
+	return (this->std::stack<T, Container>::c.rbegin());
+}
+
+template <typename T, typename Container>
+typename MutantStack<T, Container>::reverse_iterator	MutantStack<T, Container>::rend(void)
+{
+	return (this->std::stack<T, Container>::c.rend());
 }
 
 #endif
