@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 16:29:31 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/28 16:35:03 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/03/06 15:22:23 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int	main(void)
 
 	Data	n3;
 	Data	*p3;
+	n3.set_raw(19);
 	std::cout << n3.get_raw() << std::endl;
 	p3 = Serializer::deserialize(Serializer::serialize(&n3));
 	std::cout << p3->get_raw() << std::endl;
