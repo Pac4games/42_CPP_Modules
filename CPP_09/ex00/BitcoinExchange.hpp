@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 14:31:18 by paugonca          #+#    #+#             */
-/*   Updated: 2024/03/06 15:15:28 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/03/06 17:17:17 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 # define BITCOINEXCHANGE_HPP
 
 # include <iostream>
+# include <fstream>
+# include <cstdlib>
 # include <map>
+# include <algorithm>
 
 template <typename Keys, typename Value>
 void	print_map(std::map<Keys, Value> container)
@@ -23,5 +26,7 @@ void	print_map(std::map<Keys, Value> container)
 	i != container.end(); i++)
 		std::cout << i->first << " " << i->second << std::endl;
 }
+
+void	read_input(const std::string &in);
 
 #endif
