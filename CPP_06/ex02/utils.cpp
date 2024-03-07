@@ -6,11 +6,26 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 17:14:27 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/29 13:55:08 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/03/07 17:18:24 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "identify.hpp"
+
+A::A(void)
+{
+	std::cout << "A default constructor called" << std::endl;
+}
+
+B::B(void)
+{
+	std::cout << "B default constructor called" << std::endl;
+}
+
+C::C(void)
+{
+	std::cout << "C default constructor called" << std::endl;
+}
 
 void	identify(Base *p)
 {

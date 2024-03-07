@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 17:06:01 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/29 13:48:20 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/03/07 17:17:38 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,23 +19,22 @@
 
 class	Base
 {
-	public:
-		virtual ~Base(void) {};
+	public: virtual ~Base(void) {};
 };
 
 class	A : public Base
 {
-	public: A(void) { std::cout << "Class A constructor called" << std::endl; }
+	public: A(void);
 };
 
 class	B : public Base
 {
-	public: B(void) { std::cout << "Class B constructor called" << std::endl; }
+	public: B(void);
 };
 
 class	C : public Base
 {
-	public: C(void) { std::cout << "Class C constructor called" << std::endl; }
+	public: C(void);
 };
 
 // utils.cpp 
