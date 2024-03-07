@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 15:57:27 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/28 16:13:08 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/03/07 14:42:38 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,12 @@
 class	Serializer
 {
 	public:
-		Serializer(void);
-		~Serializer(void);
-
 		static uintptr_t	serialize(Data *ptr);
 		static Data			*deserialize(uintptr_t raw);
 
 	private:
+		Serializer(void);
+		~Serializer(void);
 		Serializer(const Serializer &src);
 		Serializer			&operator=(const Serializer &rhs);
 };

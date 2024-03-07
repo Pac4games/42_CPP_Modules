@@ -6,12 +6,11 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 15:46:06 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/28 14:20:24 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/03/07 14:40:45 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
-#include <cstdlib>
 
 static bool	is_all_digits(const std::string &in)
 {
