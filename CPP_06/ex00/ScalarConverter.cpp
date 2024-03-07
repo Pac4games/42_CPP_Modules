@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 16:42:02 by paugonca          #+#    #+#             */
-/*   Updated: 2024/02/28 12:56:03 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/03/07 15:09:33 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,6 @@ void	ScalarConverter::converter(const std::string &in)
 			break;
 		default:
 			std::cout << "Error: wrong syntax. " \
-			<< "Please insert a value of type char, int, flot or double" << std::endl;
+			<< "Please insert a value of type char, int, float or double" << std::endl;
 	}
 }
