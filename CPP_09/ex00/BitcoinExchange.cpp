@@ -6,12 +6,11 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 16:23:30 by paugonca          #+#    #+#             */
-/*   Updated: 2024/03/08 12:25:15 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/03/08 14:21:35 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "BitcoinExchange.hpp"
-#include <map>
 
 static void	read_database(std::map<std::string, float> &db)
 {

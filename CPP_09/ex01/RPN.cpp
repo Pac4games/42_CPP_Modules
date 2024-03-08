@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 12:16:47 by paugonca          #+#    #+#             */
-/*   Updated: 2024/03/08 13:04:33 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/03/08 13:45:15 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static bool	is_operator(char c)
 
 void	print_err(std::string msg)
 {
-	std::cerr << "Error: " << msg << std::endl;
+	std::cout << "Error: " << msg << std::endl;
 	exit(EXIT_FAILURE);
 }
 
