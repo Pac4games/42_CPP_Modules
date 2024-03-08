@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 16:23:30 by paugonca          #+#    #+#             */
-/*   Updated: 2024/03/07 14:16:39 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/03/08 12:25:15 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ static void	read_database(std::map<std::string, float> &db)
 		exit(EXIT_FAILURE);
 	}
 
-	std::string		key;
-	std::string		line;
-	std::string		tmp;
+	std::string		key, line, tmp;
 	while (true)
 	{
 		std::getline(data, line);
@@ -82,9 +80,7 @@ static bool	is_leap_year(int year)
 
 static bool	is_valid_date(std::string date)
 {
-	std::string	year_str;
-	std::string month_str;
-	std::string day_str;
+	std::string	year_str, month_str, day_str;
 	if (std::count(date.begin(), date.end(), '-') != 2)
 		return (false);
 	parse_date(date, year_str, month_str, day_str);
@@ -138,9 +134,7 @@ static bool	is_valid_line(std::string line)
 
 std::string	get_conv_date(std::string key, std::map<std::string, float> &db)
 {
-	std::string	last;
-	std::string	month;
-	std::string	day;
+	std::string	last, month, day;
 
 	parse_date(key, last, month, day);
 	for (std::map<std::string, float>::iterator i = db.begin(); i != db.end(); i++)
@@ -163,9 +157,7 @@ static void	conv_btc(std::string key, float value, std::map<std::string, float> 
 
 void	parse_input(std::string in)
 {
-	std::string						key;
-	std::string						line;
-	std::string						value;
+	std::string						key, line, value;
 	std::ifstream					infile(in.c_str());
 	if (!infile.is_open())
 	{
