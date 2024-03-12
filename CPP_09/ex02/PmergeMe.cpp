@@ -6,11 +6,12 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 16:18:56 by paugonca          #+#    #+#             */
-/*   Updated: 2024/03/11 16:05:36 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/03/12 17:11:57 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PmergeMe.hpp"
+#include <ctime>
 
 static int	lst_findPair(int value, std::list<std::pair<int, int> > &pair)
 {
@@ -37,6 +38,23 @@ static int	deq_findPair(int value, std::deque<std::pair<int, int> > &pair)
 		if (res != -2)
 			return (res);
 	}
+	return (res);
+}
+
+static int	my_atoi(char *str)
+{
+	int	res = 0;
+	int	i = 0;
+
+	for (int j = 0; str[j++]; j++)
+	{
+		if (str[j] == '+' && j == 0)
+			i++;
+		else if (str[j] < '0' || str[j] > '9')
+			return (-1);
+	}
+	while (str[i])
+		res = res * 10 + (str[i++] - '0');
 	return (res);
 }
 
@@ -69,7 +87,7 @@ PmergeMe	&PmergeMe::operator=(const PmergeMe &rhs)
 	return (*this);
 }
 
-void	PmergeMe::lst_print(std::list<int> lst)
+void	PmergeMe::lst_print(std::list<int> lst) const
 {
 	for (std::list<int>::iterator i = lst.begin(); i != lst.end(); i++)
 		std::cout << *i << " ";
@@ -153,7 +171,7 @@ void	PmergeMe::lst_divide(void)
 	lst_swapPair(pair);
 }
 
-void	PmergeMe::deq_print(std::deque<int> deq)
+void	PmergeMe::deq_print(std::deque<int> deq) const
 {
 	for (std::deque<int>::iterator i = deq.begin(); i != deq.end(); i++)
 		std::cout << *i << " ";
@@ -235,4 +253,56 @@ void	PmergeMe::deq_divide(void)
 			pair.push_back(std::make_pair(start, -1));
 	}
 	deq_swapPair(pair);
+}
+
+bool	PmergeMe::checkDups(void)
+{
+	std::list<int>::iterator	i;
+	for (std::list<int>::iterator j = _lst.begin(); j != _lst.end(); j++)
+	{
+		i = _lst.begin();
+		while (++i != j)
+			continue;
+		for (; i != _lst.end(); i++)
+			if (*i == *j)
+				return (true);
+	}
+	return (false);
+}
+
+bool	PmergeMe::parser(int ac, char **av)
+{
+	int		tmp;
+	for (int i = 1; i < ac; i++)
+	{
+		tmp = my_atoi(av[i]);
+		if (tmp == -1)
+		{
+			std::cout << "Error: please provide only numeric arguments" << std::endl;
+			return (false);
+		}
+		_lst.push_back(tmp);
+		_deq.push_back(tmp);
+	}
+	if (checkDups())
+	{
+		std::cout << "Error: duplicated arguments" << std::endl;
+		return (false);
+	}
+
+	std::cout << "Before: ";
+	lst_print();
+	lst_divide();
+	std::cout << std::endl << std::endl;
+	std::cout << "Before: ";
+	deq_print();
+	deq_divide();
+	double	lst_time = double(_lst_end - _lst_start) / CLOCKS_PER_SEC * 1000.0;
+	double	deq_time = double(_deq_end - _deq_start) / CLOCKS_PER_SEC * 1000.0;
+	std::cout << "Time to sort a range of " << ac - 1 \
+	<< " elements with std::list: " << lst_time << " ms" << std::endl;
+	std::cout << "Time to sort a range of " << ac - 1 \
+	<< " elements with std::deque: " << deq_time << " ms" << std::endl; 
+
+	return (true);
 }
