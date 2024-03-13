@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 13:06:33 by paugonca          #+#    #+#             */
-/*   Updated: 2024/03/04 15:05:55 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/03/13 15:34:15 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class	Array
 		Array(const Array &src) { *this = &src; }
 		~Array(void) { delete[] this->_array; }
 
-		Array				&operator=(const Array &rhs)
+		Array			&operator=(const Array &rhs)
 		{
 			if (this != &rhs)
 			{
@@ -49,7 +49,7 @@ class	Array
 				}
 		};
 
-		T					&operator[](unsigned int idx) const
+		T				&operator[](unsigned int idx) const
 		{
 			if (idx >= this->_size)
 				throw IndexOutOfBoundsException();

@@ -6,14 +6,94 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 14:16:30 by paugonca          #+#    #+#             */
-/*   Updated: 2024/03/04 15:12:50 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/03/13 15:34:57 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
-#include "Vessel.hpp"
 #include <cstdlib>
 #include <iostream>
+
+class	Vessel
+{
+	public:
+		Vessel(void);
+		Vessel(const std::string &name, const int hp, const int atk, const int def);
+		Vessel(const Vessel &src);
+		~Vessel(void);
+		Vessel		&operator=(const Vessel &rhs);
+
+		std::string	getName(void) const;
+		int			getHP(void) const;
+		int			getATK(void) const;
+		int			getDEF(void) const;
+
+	private:
+		std::string	_name;
+		int			_hp;
+		int		_atk;
+		int		_def;
+};
+
+Vessel::Vessel(void)
+{
+//	std::cout << "Vessel default constructor called" << std::endl;
+}
+
+Vessel::Vessel(const std::string &name, const int hp, const int atk, const int def) : _name(name), _hp(hp), _atk(atk), _def(def)
+{
+//	std::cout << "Vessel constructor for " << name << " called" << std::endl;
+}
+
+Vessel::Vessel(const Vessel &src)
+{
+//	std::cout << "Vessel copy constructor called" << std::endl;
+	*this = src;
+}
+
+Vessel::~Vessel(void)
+{
+//	std::cout << "Vessel destructor called" << std::endl;
+}
+
+Vessel	&Vessel::operator=(const Vessel &rhs)
+{
+	if (this != &rhs)
+	{
+		this->_name = rhs._name;
+		this->_hp = rhs._hp;
+		this->_atk = rhs._atk;
+		this->_def = rhs._def;
+	}
+	return (*this);
+}
+
+std::string	Vessel::getName(void) const
+{
+	return (this->_name);
+}
+
+int	Vessel::getHP(void) const
+{
+	return (this->_hp);
+}
+
+int	Vessel::getATK(void) const
+{
+	return (this->_atk);
+}
+
+int	Vessel::getDEF(void) const
+{
+	return (this->_def);
+}
+
+static void	check_stats(const Vessel &vessel)
+{
+	std::cout << "* " << vessel.getName() << std::endl;
+	std::cout << "HP " << vessel.getHP() << " ATK " << vessel.getATK() << " DEF " \
+	<< vessel.getDEF() << std::endl;
+}
 
 int	main(void)
 {
@@ -23,8 +103,7 @@ int	main(void)
 		for (int i = 0; i < 5; i++)
 		{
 			arr1[i] = i;
-//			if (arr1[i + 1])
-				std::cout << arr1[i] << " ";
+			std::cout << arr1[i] << " ";
 		}
 		std::cout << std::endl << "int array size: " << arr1.size() \
 		<< std::endl << std::endl;
@@ -33,8 +112,7 @@ int	main(void)
 		for (int i = 0; i < 7; i++)
 		{
 			arr2[i] = i + 'a';
-//			if (arr2[i + 1])
-				std::cout << arr2[i] << " ";
+			std::cout << arr2[i] << " ";
 		}
 		std::cout << std::endl << "char array size: " << arr2.size() \
 		<< std::endl << std::endl;
