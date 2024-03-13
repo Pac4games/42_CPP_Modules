@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 14:00:13 by paugonca          #+#    #+#             */
-/*   Updated: 2024/03/12 17:09:53 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/03/13 12:02:51 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,11 @@
 
 # include <list>
 # include <deque>
-# include <iostream>
+# include <iterator>
 # include <ctime>
 # include <cstdlib>
+# include <iostream>
+# include <iomanip>
 
 class	PmergeMe
 {
@@ -42,7 +44,7 @@ class	PmergeMe
 		void			deq_divide(void);
 
 		bool			checkDups(void);
-		bool			parser(int ac, char **av);
+		void			parser(int ac, char **av);
 
 	private:
 		clock_t			_lst_start, _lst_end, _deq_start, _deq_end;
