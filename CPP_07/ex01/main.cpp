@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 16:30:20 by paugonca          #+#    #+#             */
-/*   Updated: 2024/03/13 15:37:00 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/03/15 12:05:42 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ static void	check_stats(const Vessel &vessel)
 
 static void	triple_int(const int &i)
 {
-	std::cout << std::setw(2) << static_cast<int>(i * 3) << ", ";
+	std::cout << static_cast<int>(i * 3) << ", ";
 }
 
 static void	flip_case(const char &c)
@@ -113,7 +113,7 @@ int	main(void)
 {
 	int			arr1[5] = {8, 98, 42, 333, -1};
 	for (int i = 0; i < 5; i++)
-		std::cout << std::setw(2) << arr1[i] << ", ";
+		std::cout << arr1[i] << ", ";
 	std::cout << std::endl;
 	iter<int>(arr1, 5, triple_int);
 	std::cout << std::endl << std::endl;

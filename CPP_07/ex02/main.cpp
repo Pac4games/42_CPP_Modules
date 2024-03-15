@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 14:16:30 by paugonca          #+#    #+#             */
-/*   Updated: 2024/03/13 15:34:57 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/03/15 12:10:13 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,8 +130,8 @@ int	main(void)
 		std::cout << "Vessel array size: " << arr3.size() << std::endl << std::endl;
 
 		std::cout << "Invalid tests:" << std::endl;
-			std::cout << arr2[-1] << std::endl;
-			std::cout << arr1[42] << std::endl;
+		std::cout << arr2[-1] << std::endl;
+		std::cout << arr1[42] << std::endl;
 	}
 	catch (std::exception &e)
 	{
