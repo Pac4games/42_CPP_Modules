@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 12:14:00 by paugonca          #+#    #+#             */
-/*   Updated: 2024/03/05 14:23:52 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/03/18 12:35:14 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <set>
 # include <stdexcept>
 # include <iostream>
+# include <algorithm>
 
 class	Span
 {
@@ -36,7 +37,7 @@ class	Span
 
 	private:
 		Span(void);
-		unsigned int		_size;
+		unsigned int		_maxSize;
 		std::multiset<int>	_array;
 };
 
@@ -45,7 +46,7 @@ void	Span::addNumberRange(InputIt first, InputIt last)
 {
 	for (InputIt i = first; i != last; i++)
 	{
-		if (this->_array.size() == this->_size)
+		if (this->_array.size() == this->_maxSize)
 			throw std::length_error("Exception: Span is currently full, impossible to add more values");
 		this->_array.insert(*i);
 	}

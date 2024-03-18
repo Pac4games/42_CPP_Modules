@@ -1,11 +1,12 @@
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 12:25:30 by paugonca          #+#    #+#             */
-/*   Updated: 2024/03/06 13:05:26 by paugonca         ###   ########.fr       */
+/*   Created: 2024/03/18 12:40:27 by paugonca          #+#    #+#             */
+/*   Updated: 2024/03/18 12:40:46 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -13,7 +14,6 @@
 #include <cstdlib>
 #include <iostream>
 #include <list>
-#include <stack>
 #include <vector>
 
 int	main(void)

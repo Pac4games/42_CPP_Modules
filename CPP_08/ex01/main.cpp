@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 13:02:06 by paugonca          #+#    #+#             */
-/*   Updated: 2024/03/05 14:25:01 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/03/18 12:38:31 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main(void)
 
 		std::srand(time(0));
 		for (int i = 0; i < 19; i++)
-			nums.push_back(std::rand() % 1000);
+			nums.push_back(std::rand() % 10000);
 		span1.addNumberRange(nums.begin(), nums.end());
 
 		span1.printContent();

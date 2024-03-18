@@ -6,21 +6,18 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 12:26:23 by paugonca          #+#    #+#             */
-/*   Updated: 2024/03/05 14:23:42 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/03/18 12:36:13 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
-#include <algorithm>
-#include <set>
-#include <stdexcept>
 
 Span::Span(void)
 {
 //	std::cout << "Span default constructor called" << std::endl;
 }
 
-Span::Span(const unsigned int &N) : _size(N)
+Span::Span(const unsigned int &N) : _maxSize(N)
 {
 //	std::cout << "Span constructor of size " << N << " called" << std::endl;
 }
@@ -43,13 +40,13 @@ Span	&Span::operator=(const Span &rhs)
 		this->_array.clear();
 	for (std::multiset<int>::iterator i; i != rhs._array.end(); i++)
 		this->_array.insert(*i);
-	this->_size = rhs._size;
+	this->_maxSize = rhs._maxSize;
 	return (*this);
 }
 
 void	Span::addNumber(const int &num)
 {
-	if (this->_array.size() == this->_size)
+	if (this->_array.size() == this->_maxSize)
 		throw std::length_error("Exception: Span is currently full, impossible to add more values");
 	this->_array.insert(num);
 }
@@ -65,7 +62,6 @@ unsigned int	Span::shortestSpan(void) const
 	i != this->_array.end(); i++, tmp++)
 		if (*i - *tmp < res)
 			res = *i - *tmp;
-	
 	return (res);
 }
 
@@ -76,9 +72,7 @@ unsigned int	Span::longestSpan(void) const
 
 	std::multiset<int>::iterator	min = std::min_element(this->_array.begin(), this->_array.end());
 	std::multiset<int>::iterator	max = std::max_element(this->_array.begin(), this->_array.end());
-	int								res = *max - *min;
-
-	return (res);
+	return (*max - *min);
 }
 
 void	Span::printContent(void) const
@@ -94,5 +88,5 @@ void	Span::printContent(void) const
 
 const unsigned int &Span::size(void) const
 {
-	return (this->_size);
+	return (this->_maxSize);
 }
