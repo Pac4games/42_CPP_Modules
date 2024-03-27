@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 16:23:30 by paugonca          #+#    #+#             */
-/*   Updated: 2024/03/08 14:21:35 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/03/27 23:16:41 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,9 @@ static bool	is_valid_date(std::string date)
 		return (false);
 	else if (month < 1 || month > 12)
 		return (false);
+	// Bitcoin was released in 2009. As such, any year lower than that is invalid.
+	else if (year < 2009)
+		return (false);
 
 	int			daysPerMonth[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 	int			max_day = daysPerMonth[month];
@@ -125,7 +128,7 @@ static bool	is_valid_line(std::string line)
 	}
 	else if (!is_valid_date(key))
 	{
-		std::cout << "Error: invalid date => ";
+		std::cout << "Error: invalid date =>";
 		return (false);
 	}
 	return (true);
