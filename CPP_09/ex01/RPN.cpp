@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 12:16:47 by paugonca          #+#    #+#             */
-/*   Updated: 2024/03/08 13:45:15 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/04/02 11:51:11 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ static bool	is_operator(char c)
 	return (false);
 }
 
-void	print_err(std::string msg)
+int	print_err_ret(std::string msg)
 {
 	std::cout << "Error: " << msg << std::endl;
-	exit(EXIT_FAILURE);
+	return (EXIT_FAILURE);
 }
 
 static double	calculate(double a, double b, char op)
@@ -44,7 +44,7 @@ static double	calculate(double a, double b, char op)
 	return (0);
 }
 
-void	postfix(std::string in)
+int	postfix(std::string in)
 {
 	double				a, b;
 	std::stack<double>	stk;
@@ -53,7 +53,7 @@ void	postfix(std::string in)
 	for (std::string::iterator i = in.begin(); i != in.end(); i++)
 	{
 		if (!std::isdigit(*i) && !is_operator(*i))
-			print_err("please input only digits and/or operators");
+			return (print_err_ret("please input only digits and/or operators"));
 		else if (std::isdigit(*i))
 		{
 			a = *i - '0';
@@ -62,7 +62,7 @@ void	postfix(std::string in)
 		else if (is_operator(*i))
 		{
 			if (stk.size() < 2)
-				print_err("bad expression");
+				return (print_err_ret("bad expression"));
 			a = stk.top();
 			stk.pop();
 			b = stk.top();
@@ -71,7 +71,8 @@ void	postfix(std::string in)
 		}
 	}
 	if (stk.size() != 1)
-		print_err("bad expression");
+		return (print_err_ret("bad expression"));
 
 	std::cout << stk.top() << std::endl;
+	return (1);
 }

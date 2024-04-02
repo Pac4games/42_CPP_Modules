@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 12:12:30 by paugonca          #+#    #+#             */
-/*   Updated: 2024/03/08 13:04:22 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/04/02 11:49:26 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # include <string>
 # include <iostream>
 
-void	print_err(std::string msg);
-void	postfix(std::string in);
+int	print_err_ret(std::string msg);
+int	postfix(std::string in);
 
 #endif
