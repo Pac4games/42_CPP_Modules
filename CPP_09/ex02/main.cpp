@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 17:05:44 by paugonca          #+#    #+#             */
-/*   Updated: 2024/03/12 17:09:56 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/04/02 14:32:24 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,5 @@ int	main(int ac, char **av)
 		return (EXIT_FAILURE);
 	}
 	PmergeMe	sorter;
-	sorter.parser(ac, av);
-	return (EXIT_SUCCESS);
+	return (sorter.parser(ac, av));
 }

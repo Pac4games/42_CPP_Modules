@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 16:18:56 by paugonca          #+#    #+#             */
-/*   Updated: 2024/03/13 12:21:03 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/04/02 14:32:57 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -270,7 +270,7 @@ bool	PmergeMe::checkDups(void)
 	return (false);
 }
 
-void	PmergeMe::parser(int ac, char **av)
+int	PmergeMe::parser(int ac, char **av)
 {
 	int		tmp;
 	for (int i = 1; i < ac; i++)
@@ -279,7 +279,7 @@ void	PmergeMe::parser(int ac, char **av)
 		if (tmp == -1)
 		{
 			std::cout << "Error: please provide only numeric arguments" << std::endl;
-			exit(EXIT_FAILURE);
+			return (EXIT_FAILURE);
 		}
 		_lst.push_back(tmp);
 		_deq.push_back(tmp);
@@ -287,7 +287,7 @@ void	PmergeMe::parser(int ac, char **av)
 	if (checkDups())
 	{
 		std::cout << "Error: duplicated arguments" << std::endl;
-		exit(EXIT_FAILURE);
+		return (EXIT_FAILURE);
 	}
 
 	std::cout << "Before: ";
@@ -305,4 +305,5 @@ void	PmergeMe::parser(int ac, char **av)
 	std::cout << "Time to sort a range of " << ac - 1 \
 	<< " elements with std::deque: " << std::fixed << std::setprecision(3) \
 	<< deq_time << " ms" << std::endl; 
+	return (EXIT_SUCCESS);
 }
