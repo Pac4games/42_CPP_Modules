@@ -6,11 +6,12 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 16:23:30 by paugonca          #+#    #+#             */
-/*   Updated: 2024/03/27 23:16:41 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/04/03 15:33:52 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "BitcoinExchange.hpp"
+#include <cstdlib>
 
 static void	read_database(std::map<std::string, float> &db)
 {
@@ -157,14 +158,14 @@ static void	conv_btc(std::string key, float value, std::map<std::string, float> 
 	<< std::endl;
 }
 
-void	parse_input(std::string in)
+int	parse_input(std::string in)
 {
 	std::string						key, line, value;
 	std::ifstream					infile(in.c_str());
 	if (!infile.is_open())
 	{
-		std::cout << "Error: failed to read from " << in << std::endl;
-		exit(EXIT_FAILURE);
+		std::cerr << "Error: failed to read from " << in << std::endl;
+		return (EXIT_FAILURE);
 	}
 
 	std::map<std::string, float>	db;
@@ -172,17 +173,21 @@ void	parse_input(std::string in)
 	while (true)
 	{
 		std::getline(infile, line);
-		if (line.empty())
-			break;
-		if (!line.compare("date | value"))
+		if ((line.empty() && !infile.eof()) || !line.compare("date | value"))
 			continue;
+		else if (line.empty())
+			break;
 		if (is_valid_line(line))
 		{
 			key = line.substr(0, line.find('|') - 1);
 			value = line.substr(line.find('|') + 1);
+			if (key.empty() || line.empty())
+				std::cerr << "Error: bad input" << std::endl;
 			conv_btc(key, std::strtof(value.c_str(), NULL), db);
 		}
 		else
 			std::cout << " " << line << std::endl;
 	}
+
+	return (EXIT_SUCCESS);
 }

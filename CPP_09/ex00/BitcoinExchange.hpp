@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 14:31:18 by paugonca          #+#    #+#             */
-/*   Updated: 2024/03/07 14:15:41 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/04/03 12:22:08 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ void	print_map(std::map<Keys, Value> container)
 		std::cout << i->first << " " << i->second << std::endl;
 }
 
-void	parse_input(std::string in);
+int	parse_input(std::string in);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 16:23:59 by paugonca          #+#    #+#             */
-/*   Updated: 2024/03/07 14:06:54 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/04/03 12:41:43 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,5 @@ int	main(int ac, char **av)
 		return (EXIT_FAILURE);
 	}
 
-	parse_input(av[1]);
-	return (EXIT_SUCCESS);
+	return (parse_input(av[1]));
 }
