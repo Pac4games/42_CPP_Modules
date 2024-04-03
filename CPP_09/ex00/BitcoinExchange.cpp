@@ -6,11 +6,12 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 16:23:30 by paugonca          #+#    #+#             */
-/*   Updated: 2024/04/03 15:33:52 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/04/03 16:35:28 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "BitcoinExchange.hpp"
+#include <algorithm>
 #include <cstdlib>
 
 static void	read_database(std::map<std::string, float> &db)
@@ -109,13 +110,19 @@ static bool	is_valid_date(std::string date)
 
 static bool	is_valid_line(std::string line)
 {
-	if (std::count(line.begin(), line.end(), '|') != 1)
+	if (std::count(line.begin(), line.end(), '|') != 1 || line.find('|') != 11)
 	{
 		std::cout << "Error: bad input =>";
 		return (false);
 	}
 
 	std::string	key = line.substr(0, line.find('|') - 1);
+	std::cout << "key: " << std::endl;
+	if (key.empty())
+	{
+		std::cout << "Error: bad input =>";
+		return (false);
+	}
 	std::string	value = line.substr(line.find('|') + 2);
 	if (!str_isnum(value))
 	{

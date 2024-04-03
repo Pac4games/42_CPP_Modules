@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 14:31:18 by paugonca          #+#    #+#             */
-/*   Updated: 2024/04/03 12:22:08 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/04/03 16:18:12 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define BITCOINEXCHANGE_HPP
 
 # include <iostream>
+# include <string>
 # include <fstream>
 # include <cstdlib>
 # include <map>
