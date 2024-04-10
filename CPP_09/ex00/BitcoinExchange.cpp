@@ -6,7 +6,7 @@
 /*   By: paugonca <paugonca@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 16:23:30 by paugonca          #+#    #+#             */
-/*   Updated: 2024/04/08 11:48:45 by paugonca         ###   ########.fr       */
+/*   Updated: 2024/04/10 12:23:59 by paugonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -175,7 +175,7 @@ int	parse_input(std::string in)
 
 	std::map<std::string, float>	db;
 	read_database(db);
-	while (true)
+	while (!infile.eof())
 	{
 		std::getline(infile, line);
 		if ((line.empty() && !infile.eof()) || !line.compare("date | value"))
